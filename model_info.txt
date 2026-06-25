@@ -1,0 +1,264 @@
+
+
+Analyzing model 
+C:/Users/31254/STM32Cube/Repository/Packs/STMicroelectronics/X-CUBE-AI/10.2.0/Utilities/windows/stedgeai.exe analyze --target stm32f4 --name hello_world -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/hello_world_int8_sin.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace1855037811120016880166339986356158 --output C:/Users/31254/.stm32cubemx/hello_world_output 
+ST Edge AI Core v2.2.0-20266 2adc00962 
+Creating c (debug) info json file C:\Users\31254\.stm32cubemx\hello_world_output\hello_world_c_info.json 
+  
+ Exec/report summary (analyze) 
+ -------------------------------------------------------------------------------------------------------------------------- 
+ model file         :   D:\edgedownload\STM32F407VGT6_TensorFlow-Lite-Micro\hello_world_int8_sin.tflite                     
+ type               :   tflite                                                                                              
+ c_name             :   hello_world                                                                                         
+ compression        :   none                                                                                                
+ options            :   allocate-inputs, allocate-outputs                                                                   
+ optimization       :   balanced                                                                                            
+ target/series      :   stm32f4                                                                                             
+ workspace dir      :   C:\Users\31254\AppData\Local\Temp\mxAI_workspace1855037811120016880166339986356158                  
+ output dir         :   C:\Users\31254\.stm32cubemx\hello_world_output                                                      
+ model_fmt          :   ss/sa per channel                                                                                   
+ model_name         :   hello_world_int8_sin                                                                                
+ model_hash         :   0xf0e1b46dd45bb0156ae8a0e7804921d0                                                                  
+ params #           :   1,665 items (1.86 KiB)                                                                              
+ -------------------------------------------------------------------------------------------------------------------------- 
+ input 1/1          :   'serving_default_keras_tensor0', int8(1x1), 1 Bytes, QLinear(0.024621628,-128,int8), activations    
+ output 1/1         :   'gemm_3', int8(1x1), 1 Bytes, QLinear(0.007913013,1,int8), activations                              
+ macc               :   1,665                                                                                               
+ weights (ro)       :   1,908 B (1.86 KiB) (1 segment) / -4,752(-71.4%) vs float model                                      
+ activations (rw)   :   448 B (448 B) (1 segment) *                                                                         
+ ram (total)        :   448 B (448 B) = 448 + 0 + 0                                                                         
+ -------------------------------------------------------------------------------------------------------------------------- 
+ (*) 'input'/'output' buffers are allocated in the activations buffer 
+Computing AI RT data/code size (target=stm32f4).. 
+ Model name - hello_world_int8_sin 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ m_id   layer (original)                   oshape        param/size       macc                    connected to 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ 0      serving_default_keras_tensor0 ()   [b:1,c:1] 
+        tfl_pseudo_qconst7 ()              [b:32,c:1]    32/32 
+        tfl_pseudo_qconst6 ()              [b:32]        32/128 
+        gemm_0 (FULLY_CONNECTED)           [b:1,c:32]                       64   serving_default_keras_tensor0 
+                                                                                            tfl_pseudo_qconst7 
+                                                                                            tfl_pseudo_qconst6 
+        nl_0_nl (FULLY_CONNECTED)          [b:1,c:32]                       32                          gemm_0 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ 1      tfl_pseudo_qconst5 ()              [b:32,c:32]   1,024/1,024 
+        tfl_pseudo_qconst4 ()              [b:32]        32/128 
+        gemm_1 (FULLY_CONNECTED)           [b:1,c:32]                    1,056                         nl_0_nl 
+                                                                                            tfl_pseudo_qconst5 
+                                                                                            tfl_pseudo_qconst4 
+        nl_1_nl (FULLY_CONNECTED)          [b:1,c:32]                       32                          gemm_1 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ 2      tfl_pseudo_qconst3 ()              [b:16,c:32]   512/512 
+        tfl_pseudo_qconst2 ()              [b:16]        16/64 
+        gemm_2 (FULLY_CONNECTED)           [b:1,c:16]                      528                         nl_1_nl 
+                                                                                            tfl_pseudo_qconst3 
+                                                                                            tfl_pseudo_qconst2 
+        nl_2_nl (FULLY_CONNECTED)          [b:1,c:16]                       16                          gemm_2 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ 3      tfl_pseudo_qconst1 ()              [b:1,c:16]    16/16 
+        tfl_pseudo_qconst ()               [b:1]         1/4 
+        gemm_3 (FULLY_CONNECTED)           [b:1,c:1]                        17                         nl_2_nl 
+                                                                                            tfl_pseudo_qconst1 
+                                                                                             tfl_pseudo_qconst 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ model: macc=1,745 weights=1,908 activations=-- io=-- 
+ Number of operations per c-layer 
+ ------- ------ ---------------- ------- ------------ 
+ c_id    m_id   name (type)          #op         type 
+ ------- ------ ---------------- ------- ------------ 
+ 0       0      gemm_0 (Dense)        64   smul_s8_s8 
+ 1       1      gemm_1 (Dense)     1,056   smul_s8_s8 
+ 2       2      gemm_2 (Dense)       528   smul_s8_s8 
+ 3       3      gemm_3 (Dense)        17   smul_s8_s8 
+ ------- ------ ---------------- ------- ------------ 
+ total                             1,665 
+ Number of operation types 
+ ---------------- ------- ----------- 
+ operation type         #           % 
+ ---------------- ------- ----------- 
+ smul_s8_s8         1,665      100.0% 
+ Complexity report (model) 
+ ------ ------------------------------- ------------------------- ------------------------- ------ 
+ m_id   name                            c_macc                    c_rom                     c_id 
+ ------ ------------------------------- ------------------------- ------------------------- ------ 
+ 0      serving_default_keras_tensor0   |                  3.8%   |||                8.4%   [0] 
+ 1      tfl_pseudo_qconst5              ||||||||||||||||  63.4%   ||||||||||||||||  60.4%   [1] 
+ 2      tfl_pseudo_qconst3              ||||||||          31.7%   ||||||||          30.2%   [2] 
+ 3      tfl_pseudo_qconst1              |                  1.0%   |                  1.0%   [3] 
+ ------ ------------------------------- ------------------------- ------------------------- ------ 
+ macc=1,665 weights=1,908 act=448 ram_io=0 
+ Requested memory size by section - "stm32f4" target 
+ ------------------------------ -------- -------- ------- ----- 
+ module                             text   rodata    data   bss 
+ ------------------------------ -------- -------- ------- ----- 
+ NetworkRuntime1020_CM4_GCC.a      9,376        0       0     0 
+ hello_world.o                       608      606   1,896   112 
+ hello_world_data.o                   48       16      88     0 
+ lib (toolchain)*                  1,652        0       0     0 
+ ------------------------------ -------- -------- ------- ----- 
+ RT total**                       11,684      622   1,984   112 
+ ------------------------------ -------- -------- ------- ----- 
+ weights                               0    1,912       0     0 
+ activations                           0        0       0   448 
+ io                                    0        0       0     0 
+ ------------------------------ -------- -------- ------- ----- 
+ TOTAL                            11,684    2,534   1,984   560 
+ ------------------------------ -------- -------- ------- ----- 
+ *  toolchain objects (libm/libgcc*) 
+ ** RT AI runtime objects (kernels+infrastructure) 
+  Summary - "stm32f4" target 
+  --------------------------------------------------- 
+               FLASH (ro)      %*   RAM (rw)       % 
+  --------------------------------------------------- 
+  RT total         14,290   88.2%      2,096   82.4% 
+  --------------------------------------------------- 
+  TOTAL            16,202              2,544 
+  --------------------------------------------------- 
+  *  rt/total 
+Creating txt report file C:\Users\31254\.stm32cubemx\hello_world_output\hello_world_analyze_report.txt 
+elapsed time (analyze): 17.249s 
+Model file:      hello_world_int8_sin.tflite 
+Total Flash:     16198 B (15.82 KiB) 
+    Weights:     1908 B (1.86 KiB) 
+    Library:     14290 B (13.96 KiB) 
+Total Ram:       2544 B (2.48 KiB) 
+    Activations: 448 B 
+    Library:     2096 B (2.05 KiB) 
+    Input:       1 B (included in Activations) 
+    Output:      1 B (included in Activations) 
+Done 
+Analyze complete on AI model
+
+
+
+Analyzing model 
+C:/Users/31254/STM32Cube/Repository/Packs/STMicroelectronics/X-CUBE-AI/10.2.0/Utilities/windows/stedgeai.exe analyze --target stm32f4 --name hello_world -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/hello_world_int8_cos.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace18729614807600862687529178474215 --output C:/Users/31254/.stm32cubemx/hello_world_output 
+ST Edge AI Core v2.2.0-20266 2adc00962 
+Creating c (debug) info json file C:\Users\31254\.stm32cubemx\hello_world_output\hello_world_c_info.json 
+  
+ Exec/report summary (analyze) 
+ -------------------------------------------------------------------------------------------------------------------------- 
+ model file         :   D:\edgedownload\STM32F407VGT6_TensorFlow-Lite-Micro\hello_world_int8_cos.tflite                     
+ type               :   tflite                                                                                              
+ c_name             :   hello_world                                                                                         
+ compression        :   none                                                                                                
+ options            :   allocate-inputs, allocate-outputs                                                                   
+ optimization       :   balanced                                                                                            
+ target/series      :   stm32f4                                                                                             
+ workspace dir      :   C:\Users\31254\AppData\Local\Temp\mxAI_workspace18729614807600862687529178474215                    
+ output dir         :   C:\Users\31254\.stm32cubemx\hello_world_output                                                      
+ model_fmt          :   ss/sa per channel                                                                                   
+ model_name         :   hello_world_int8_cos                                                                                
+ model_hash         :   0x2e5b0f88fe865afdf910b3c52ae8b1ee                                                                  
+ params #           :   1,665 items (1.86 KiB)                                                                              
+ -------------------------------------------------------------------------------------------------------------------------- 
+ input 1/1          :   'serving_default_keras_tensor0', int8(1x1), 1 Bytes, QLinear(0.024609035,-128,int8), activations    
+ output 1/1         :   'gemm_3', int8(1x1), 1 Bytes, QLinear(0.007876357,-1,int8), activations                             
+ macc               :   1,665                                                                                               
+ weights (ro)       :   1,908 B (1.86 KiB) (1 segment) / -4,752(-71.4%) vs float model                                      
+ activations (rw)   :   448 B (448 B) (1 segment) *                                                                         
+ ram (total)        :   448 B (448 B) = 448 + 0 + 0                                                                         
+ -------------------------------------------------------------------------------------------------------------------------- 
+ (*) 'input'/'output' buffers are allocated in the activations buffer 
+Computing AI RT data/code size (target=stm32f4).. 
+ Model name - hello_world_int8_cos 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ m_id   layer (original)                   oshape        param/size       macc                    connected to 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ 0      serving_default_keras_tensor0 ()   [b:1,c:1] 
+        tfl_pseudo_qconst7 ()              [b:32,c:1]    32/32 
+        tfl_pseudo_qconst6 ()              [b:32]        32/128 
+        gemm_0 (FULLY_CONNECTED)           [b:1,c:32]                       64   serving_default_keras_tensor0 
+                                                                                            tfl_pseudo_qconst7 
+                                                                                            tfl_pseudo_qconst6 
+        nl_0_nl (FULLY_CONNECTED)          [b:1,c:32]                       32                          gemm_0 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ 1      tfl_pseudo_qconst5 ()              [b:32,c:32]   1,024/1,024 
+        tfl_pseudo_qconst4 ()              [b:32]        32/128 
+        gemm_1 (FULLY_CONNECTED)           [b:1,c:32]                    1,056                         nl_0_nl 
+                                                                                            tfl_pseudo_qconst5 
+                                                                                            tfl_pseudo_qconst4 
+        nl_1_nl (FULLY_CONNECTED)          [b:1,c:32]                       32                          gemm_1 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ 2      tfl_pseudo_qconst3 ()              [b:16,c:32]   512/512 
+        tfl_pseudo_qconst2 ()              [b:16]        16/64 
+        gemm_2 (FULLY_CONNECTED)           [b:1,c:16]                      528                         nl_1_nl 
+                                                                                            tfl_pseudo_qconst3 
+                                                                                            tfl_pseudo_qconst2 
+        nl_2_nl (FULLY_CONNECTED)          [b:1,c:16]                       16                          gemm_2 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ 3      tfl_pseudo_qconst1 ()              [b:1,c:16]    16/16 
+        tfl_pseudo_qconst ()               [b:1]         1/4 
+        gemm_3 (FULLY_CONNECTED)           [b:1,c:1]                        17                         nl_2_nl 
+                                                                                            tfl_pseudo_qconst1 
+                                                                                             tfl_pseudo_qconst 
+ ------ ---------------------------------- ------------- ------------- ------- ------------------------------- 
+ model: macc=1,745 weights=1,908 activations=-- io=-- 
+ Number of operations per c-layer 
+ ------- ------ ---------------- ------- ------------ 
+ c_id    m_id   name (type)          #op         type 
+ ------- ------ ---------------- ------- ------------ 
+ 0       0      gemm_0 (Dense)        64   smul_s8_s8 
+ 1       1      gemm_1 (Dense)     1,056   smul_s8_s8 
+ 2       2      gemm_2 (Dense)       528   smul_s8_s8 
+ 3       3      gemm_3 (Dense)        17   smul_s8_s8 
+ ------- ------ ---------------- ------- ------------ 
+ total                             1,665 
+ Number of operation types 
+ ---------------- ------- ----------- 
+ operation type         #           % 
+ ---------------- ------- ----------- 
+ smul_s8_s8         1,665      100.0% 
+ Complexity report (model) 
+ ------ ------------------------------- ------------------------- ------------------------- ------ 
+ m_id   name                            c_macc                    c_rom                     c_id 
+ ------ ------------------------------- ------------------------- ------------------------- ------ 
+ 0      serving_default_keras_tensor0   |                  3.8%   |||                8.4%   [0] 
+ 1      tfl_pseudo_qconst5              ||||||||||||||||  63.4%   ||||||||||||||||  60.4%   [1] 
+ 2      tfl_pseudo_qconst3              ||||||||          31.7%   ||||||||          30.2%   [2] 
+ 3      tfl_pseudo_qconst1              |                  1.0%   |                  1.0%   [3] 
+ ------ ------------------------------- ------------------------- ------------------------- ------ 
+ macc=1,665 weights=1,908 act=448 ram_io=0 
+ Requested memory size by section - "stm32f4" target 
+ ------------------------------ -------- -------- ------- ----- 
+ module                             text   rodata    data   bss 
+ ------------------------------ -------- -------- ------- ----- 
+ NetworkRuntime1020_CM4_GCC.a      9,376        0       0     0 
+ hello_world.o                       608      606   1,896   112 
+ hello_world_data.o                   48       16      88     0 
+ lib (toolchain)*                  1,652        0       0     0 
+ ------------------------------ -------- -------- ------- ----- 
+ RT total**                       11,684      622   1,984   112 
+ ------------------------------ -------- -------- ------- ----- 
+ weights                               0    1,912       0     0 
+ activations                           0        0       0   448 
+ io                                    0        0       0     0 
+ ------------------------------ -------- -------- ------- ----- 
+ TOTAL                            11,684    2,534   1,984   560 
+ ------------------------------ -------- -------- ------- ----- 
+ *  toolchain objects (libm/libgcc*) 
+ ** RT AI runtime objects (kernels+infrastructure) 
+  Summary - "stm32f4" target 
+  --------------------------------------------------- 
+               FLASH (ro)      %*   RAM (rw)       % 
+  --------------------------------------------------- 
+  RT total         14,290   88.2%      2,096   82.4% 
+  --------------------------------------------------- 
+  TOTAL            16,202              2,544 
+  --------------------------------------------------- 
+  *  rt/total 
+Creating txt report file C:\Users\31254\.stm32cubemx\hello_world_output\hello_world_analyze_report.txt 
+elapsed time (analyze): 16.257s 
+Model file:      hello_world_int8_cos.tflite 
+Total Flash:     16198 B (15.82 KiB) 
+    Weights:     1908 B (1.86 KiB) 
+    Library:     14290 B (13.96 KiB) 
+Total Ram:       2544 B (2.48 KiB) 
+    Activations: 448 B 
+    Library:     2096 B (2.05 KiB) 
+    Input:       1 B (included in Activations) 
+    Output:      1 B (included in Activations) 
+Done 
+Analyze complete on AI model
+

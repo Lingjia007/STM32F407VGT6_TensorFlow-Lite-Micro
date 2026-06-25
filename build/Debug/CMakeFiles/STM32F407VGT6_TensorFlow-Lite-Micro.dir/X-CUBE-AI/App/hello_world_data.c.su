@@ -1,0 +1,4 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/hello_world_data.c:42:11:ai_hello_world_data_activations_buffer_get	72	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/hello_world_data.c:60:11:ai_hello_world_data_weights_buffer_get	72	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/hello_world_data.c:78:11:ai_hello_world_data_weights_get	4	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/hello_world_data.c:91:9:ai_hello_world_data_params_get	32	static

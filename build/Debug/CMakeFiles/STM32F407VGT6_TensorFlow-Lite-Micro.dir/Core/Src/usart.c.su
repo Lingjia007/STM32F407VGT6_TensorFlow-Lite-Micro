@@ -1,0 +1,5 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/Core/Src/usart.c:30:6:MX_UART4_Init	8	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/Core/Src/usart.c:58:6:HAL_UART_MspInit	48	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/Core/Src/usart.c:91:6:HAL_UART_MspDeInit	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/Core/Src/usart.c:125:1:__io_putchar	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/Core/Src/usart.c:132:5:_write	24	static
