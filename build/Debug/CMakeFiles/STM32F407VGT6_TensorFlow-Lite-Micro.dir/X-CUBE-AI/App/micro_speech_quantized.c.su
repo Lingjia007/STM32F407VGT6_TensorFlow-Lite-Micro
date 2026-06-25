@@ -1,0 +1,13 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:356:9:micro_speech_quantized_configure_activations	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:389:9:micro_speech_quantized_configure_weights	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:422:9:ai_micro_speech_quantized_get_info	160	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:469:9:ai_micro_speech_quantized_get_report	160	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:516:10:ai_micro_speech_quantized_get_error	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:523:10:ai_micro_speech_quantized_create	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:534:10:ai_micro_speech_quantized_create_and_init	88	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:569:12:ai_micro_speech_quantized_inputs_get	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:580:12:ai_micro_speech_quantized_outputs_get	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:591:11:ai_micro_speech_quantized_destroy	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:598:9:ai_micro_speech_quantized_init	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:615:8:ai_micro_speech_quantized_run	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/micro_speech_quantized.c:623:8:ai_micro_speech_quantized_forward	16	static

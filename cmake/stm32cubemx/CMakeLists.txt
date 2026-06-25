@@ -33,6 +33,9 @@ set(MX_Application_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../X-CUBE-AI/App/hello_world.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../X-CUBE-AI/App/hello_world_data.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../X-CUBE-AI/App/hello_world_data_params.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../X-CUBE-AI/App/micro_speech_quantized.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../X-CUBE-AI/App/micro_speech_quantized_data.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../X-CUBE-AI/App/micro_speech_quantized_data_params.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../X-CUBE-AI/App/app_x-cube-ai.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../startup_stm32f407xx.s
 )

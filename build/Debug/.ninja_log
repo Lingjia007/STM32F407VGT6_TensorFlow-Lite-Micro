@@ -22,8 +22,8 @@
 14	230	8040850604962580	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj	11de1702137dede8
 21	230	8040850605034902	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj	466ac9a628c8e0de
 17	221	8040850604999694	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj	54005b32cc781447
-225	426	8040957979623351	STM32F407VGT6_TensorFlow-Lite-Micro.elf	23e5debba849f636
-2	113	8040972055564491	build.ninja	ef5669dfcade74b3
+3	337	8040972340981247	STM32F407VGT6_TensorFlow-Lite-Micro.elf	20dd306f47669eb5
+2	113	8041000620366319	build.ninja	ef5669dfcade74b3
 15	93	8040957071007470	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/X-CUBE-AI/App/hello_world_data_params.c.obj	2ef83407464b00f7
 11	112	8040957070967406	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/X-CUBE-AI/App/hello_world_data.c.obj	24236649396f31ac
 7	155	8040957070919671	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/X-CUBE-AI/App/hello_world.c.obj	551bd2b2bfdbddb1
@@ -33,4 +33,14 @@
 54	200	8040851955194571	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/Drivers/CMSIS/DSP/Source/FastMathFunctions/arm_cos_f32.c.obj	4fb70af36a4a8dd2
 58	765	8040851955240153	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/Drivers/CMSIS/DSP/Source/CommonTables/arm_common_tables.c.obj	acee2f2241c124d6
 4	98	8040952780310305	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/Drivers/CMSIS/DSP/Source/FastMathFunctions/arm_sin_f32.c.obj	aaa0a52886b7f97
-3	337	8040972340981247	STM32F407VGT6_TensorFlow-Lite-Micro.elf	20dd306f47669eb5
+1	104	8041000620366319	build.ninja	ef5669dfcade74b3
+32	171	8041000620934140	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/X-CUBE-AI/App/micro_speech_quantized_data_params.c.obj	d51d3e77e9bc0fe6
+27	173	8041000620893736	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/X-CUBE-AI/App/micro_speech_quantized_data.c.obj	73fcee5ce48d0a8
+8	174	8041000620692157	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/Core/Src/syscalls.c.obj	8e8732cda7380de3
+15	174	8041000620772146	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/X-CUBE-AI/App/hello_world_data.c.obj	24236649396f31ac
+19	174	8041000620803093	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/X-CUBE-AI/App/hello_world_data_params.c.obj	2ef83407464b00f7
+23	185	8041000620848530	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/X-CUBE-AI/App/micro_speech_quantized.c.obj	324b4b4f16e7b66a
+11	186	8041000620728602	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/X-CUBE-AI/App/hello_world.c.obj	551bd2b2bfdbddb1
+4	257	8041000620651982	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/Core/Src/main.c.obj	96e32759d888f76b
+36	326	8041000620974590	CMakeFiles/STM32F407VGT6_TensorFlow-Lite-Micro.dir/X-CUBE-AI/App/app_x-cube-ai.c.obj	8ffad122de42052e
+326	604	8041000623876882	STM32F407VGT6_TensorFlow-Lite-Micro.elf	77263a51b2d0add8
