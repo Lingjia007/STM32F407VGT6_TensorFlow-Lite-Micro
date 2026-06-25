@@ -183,7 +183,7 @@ build STM32F407VGT6_TensorFlow-Lite-Micro.elf: C_EXECUTABLE_LINKER__STM32F407VGT
   LINK_LIBRARIES = -l:NetworkRuntime1020_CM4_GCC.a  -lm
   LINK_PATH = -LD:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/cmake/stm32cubemx/../../Middlewares/ST/AI/Lib
   OBJECT_DIR = CMakeFiles\STM32F407VGT6_TensorFlow-Lite-Micro.dir
-  POST_BUILD = cd .
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\edgedownload\STM32F407VGT6_TensorFlow-Lite-Micro\build\Debug && C:\Tools\arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-objcopy.exe -O ihex D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/build/Debug/STM32F407VGT6_TensorFlow-Lite-Micro.elf STM32F407VGT6_TensorFlow-Lite-Micro.hex && C:\Tools\arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-objcopy.exe -O binary D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/build/Debug/STM32F407VGT6_TensorFlow-Lite-Micro.elf STM32F407VGT6_TensorFlow-Lite-Micro.bin"
   PRE_LINK = cd .
   TARGET_FILE = STM32F407VGT6_TensorFlow-Lite-Micro.elf
   TARGET_PDB = STM32F407VGT6_TensorFlow-Lite-Micro.elf.dbg
