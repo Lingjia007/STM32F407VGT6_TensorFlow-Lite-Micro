@@ -3,18 +3,18 @@
 
 #include <stdint.h>
 
-/*vofa的通道数量*/
+/*vofa锟斤拷通锟斤拷锟斤拷锟斤拷*/
 #define VOFA_CH_COUNT               15
 
 #define VOFA_RECV_CH_COUNT               4
 
-/*发送结构体*/
+/*锟斤拷锟酵结构锟斤拷*/
 typedef struct{
     float fdata[VOFA_CH_COUNT];
     const unsigned char tail[4];          /*尾帧 0x00, 0x00, 0x80, 0x7f*/ 
 }VOFA_Send_Handle_t;
 
-/*接收结构体*/
+/*锟斤拷锟秸结构锟斤拷*/
 typedef struct{
     float fdata[VOFA_RECV_CH_COUNT];
 }VOFA_Recv_Handle_t;
@@ -25,6 +25,7 @@ extern VOFA_Recv_Handle_t VOFA_Recv_Handle;
 
 void Vofa_Init(void);
 void Vofa_Data_deal(uint8_t *buf);
+void Vofa_Send(void);
 
 
 

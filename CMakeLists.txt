@@ -299,6 +299,9 @@ set(TFLM_SOURCES
 
     # Micro speech TFLM preprocess wrapper
     ${CMAKE_SOURCE_DIR}/X-CUBE-AI/App/micro_speech_tflm_preprocess.cpp
+
+    # VOFA+ debug support
+    ${CMAKE_SOURCE_DIR}/VOFA+_DEBUG/vofa_debug.c
 )
 
 # Add sources to executable
@@ -339,6 +342,8 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${TFLM_BASE}/third_party/cmsis_nn/Include
     # KissFFT (for signal processing FFT)
     ${TFLM_BASE}/third_party/kissfft
+    # VOFA+ debug
+    ${CMAKE_SOURCE_DIR}/VOFA+_DEBUG
 )
 
 # Add project symbols (macros)

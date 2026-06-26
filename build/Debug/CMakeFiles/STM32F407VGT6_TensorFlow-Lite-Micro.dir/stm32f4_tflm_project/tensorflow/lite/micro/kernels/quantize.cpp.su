@@ -1,2 +1,0 @@
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/quantize.cpp:28:7:void* tflite::{anonymous}::InitQuantizeReference(TfLiteContext*, const char*, size_t)	24	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/quantize.cpp:37:18:TFLMRegistration tflite::Register_QUANTIZE()	24	static
