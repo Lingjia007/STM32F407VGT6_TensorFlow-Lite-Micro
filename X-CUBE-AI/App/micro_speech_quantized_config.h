@@ -3,7 +3,7 @@
   ******************************************************************************
   * @file    micro_speech_quantized_config.h
   * @author  AST Embedded Analytics Research Platform
-  * @date    2026-06-26T18:09:20+0800
+  * @date    2026-06-26T20:16:24+0800
   * @brief   AI Tool Automatic Code Generator for Custom Layers Implementation
   ******************************************************************************
   * @attention

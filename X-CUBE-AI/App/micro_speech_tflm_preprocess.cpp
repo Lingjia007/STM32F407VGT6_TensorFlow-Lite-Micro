@@ -32,7 +32,7 @@ constexpr int kAudioSampleStrideCount =
     kFeatureStrideMs * kAudioSampleFrequency / 1000;
 
 /* Arena size for audio_preprocessor model (determined empirically) */
-constexpr size_t kArenaSize = 28584;
+constexpr size_t kArenaSize = 9000;
 alignas(16) uint8_t g_arena[kArenaSize];
 
 using AudioPreprocessorOpResolver = tflite::MicroMutableOpResolver<18>;

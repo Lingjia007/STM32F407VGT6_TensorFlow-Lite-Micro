@@ -720,44 +720,44 @@
   ],
   "environment": {
     "generated_model": {
-      "generated_time": "2026-06-26T18:08:40+0800",
+      "generated_time": "2026-06-26T20:16:06+0800",
       "model_files": [
         {
           "name": "hello_world_data_params.h",
-          "signature": "0x7558aaf49bec2a85c4b49b84eeb9161f"
+          "signature": "0x7f2617542635a3217be9b28ca44d3b64"
         },
         {
           "name": "hello_world_data_params.c",
-          "signature": "0xfc5f03de6e52a50bee748579088a7051"
+          "signature": "0x6e208b790171904404da7c32eef9cc7f"
         },
         {
           "name": "hello_world_data.h",
-          "signature": "0x82a08b9dd9f235c108d01d451ca0c609"
+          "signature": "0x8c587c549e6d6e41c360d51c40101cdf"
         },
         {
           "name": "hello_world_data.c",
-          "signature": "0x46f1fe416cefbccdd2483d7ddd1200ad"
+          "signature": "0xe4474f7ce2893809ae318a0e4e147e93"
         },
         {
           "name": "hello_world_config.h",
-          "signature": "0x72b2cbac6a37676a27409eb9a9b40018"
+          "signature": "0xc71fd5f6495c9d8e8d13637786d935e7"
         },
         {
           "name": "hello_world.h",
-          "signature": "0x89130b7ae62800214dd1133399703041"
+          "signature": "0xdba73d674c14643debd605b7c4c97d34"
         },
         {
           "name": "hello_world.c",
-          "signature": "0x7e9e9b758b5044af1f9885d724f71f9e"
+          "signature": "0x009872e61c2758e189e55cda094c1342"
         }
       ],
       "name": "hello_world"
     },
-    "network_signature": "0xff0a45d7f0de6de3",
+    "network_signature": "0x348939ee0ee4b576",
     "test_name": "",
     "tools": [
       {
-        "arguments": "generate --target stm32f4 --name hello_world -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/hello_world_int8_cos.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace545808549020012009077089245288283 --output C:/Users/31254/.stm32cubemx/hello_world_output",
+        "arguments": "generate --target stm32f4 --name hello_world -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/hello_world_int8_cos.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace131084971180003998293203649059024 --output C:/Users/31254/.stm32cubemx/hello_world_output",
         "environment": [
           "STATS_TYPE=X-CUBE-AI"
         ],

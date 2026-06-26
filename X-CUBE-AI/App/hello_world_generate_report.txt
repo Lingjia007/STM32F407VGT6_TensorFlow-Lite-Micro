@@ -1,6 +1,6 @@
 ST Edge AI Core v2.2.0-20266 2adc00962
-Created date          : 2026-06-26 18:08:41
-Parameters            : generate --target stm32f4 --name hello_world -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/hello_world_int8_cos.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace545808549020012009077089245288283 --output C:/Users/31254/.stm32cubemx/hello_world_output
+Created date          : 2026-06-26 20:16:07
+Parameters            : generate --target stm32f4 --name hello_world -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/hello_world_int8_cos.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace131084971180003998293203649059024 --output C:/Users/31254/.stm32cubemx/hello_world_output
 
 Exec/report summary (generate)
 --------------------------------------------------------------------------------------------------------------------------
@@ -11,7 +11,7 @@ compression        :   none
 options            :   allocate-inputs, allocate-outputs                                                                  
 optimization       :   balanced                                                                                           
 target/series      :   stm32f4                                                                                            
-workspace dir      :   C:\Users\31254\AppData\Local\Temp\mxAI_workspace545808549020012009077089245288283                  
+workspace dir      :   C:\Users\31254\AppData\Local\Temp\mxAI_workspace131084971180003998293203649059024                  
 output dir         :   C:\Users\31254\.stm32cubemx\hello_world_output                                                     
 model_fmt          :   ss/sa per channel                                                                                  
 model_name         :   hello_world_int8_cos                                                                               
