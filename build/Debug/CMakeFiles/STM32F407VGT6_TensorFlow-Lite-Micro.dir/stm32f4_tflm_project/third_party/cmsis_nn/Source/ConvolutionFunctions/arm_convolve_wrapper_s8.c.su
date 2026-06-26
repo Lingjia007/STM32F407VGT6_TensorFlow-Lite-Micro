@@ -1,0 +1,4 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/cmsis_nn/Include/arm_nnsupportfunctions.h:125:22:arm_nn_is_convolve_1x1	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/cmsis_nn/Include/arm_nnsupportfunctions.h:141:22:arm_nn_is_convolve_1x1_fast	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/cmsis_nn/Include/arm_nnsupportfunctions.h:153:22:arm_nn_is_convolve_1_x_n	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/cmsis_nn/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c:51:21:arm_convolve_wrapper_s8	56	static

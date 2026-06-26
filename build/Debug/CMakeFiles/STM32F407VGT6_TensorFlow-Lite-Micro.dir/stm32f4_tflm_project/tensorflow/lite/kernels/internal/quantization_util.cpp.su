@@ -1,0 +1,28 @@
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/bits/std_abs.h:81:3:constexpr float std::abs(float)	16	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/cmath:333:3:constexpr float std::log(float)	16	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/cmath:2694:3:constexpr float std::round(float)	16	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1075:7:static constexpr int std::numeric_limits<int>::max()	4	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1214:7:static constexpr long int std::numeric_limits<long int>::max()	4	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1351:7:static constexpr long long int std::numeric_limits<long long int>::min()	4	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1354:7:static constexpr long long int std::numeric_limits<long long int>::max()	4	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1798:7:static constexpr double std::numeric_limits<double>::infinity()	4	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1801:7:static constexpr double std::numeric_limits<double>::quiet_NaN()	4	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:53:6:void tflite::QuantizeMultiplier(double, int32_t*, int*)	56	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:106:6:void tflite::QuantizeMultiplierGreaterThanOne(double, int32_t*, int*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:114:6:void tflite::QuantizeMultiplierSmallerThanOneExp(double, int32_t*, int*)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:125:9:int64_t tflite::IntegerFrExp(double, int*)	112	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:191:8:double tflite::DoubleFromFractionAndShift(int64_t, int)	152	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:238:8:double tflite::IntegerDoubleMultiply(double, double)	72	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:253:5:int tflite::IntegerDoubleCompare(double, double)	48	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:282:6:void tflite::PreprocessSoftmaxScaling(double, double, int, int32_t*, int*)	72	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:321:6:void tflite::PreprocessLogSoftmaxScalingExp(double, double, int, int32_t*, int*, int32_t*, int*)	56	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:338:5:int tflite::CalculateInputRadius(int, int, int)	64	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:357:6:void tflite::NudgeQuantizationRange(float, float, int, int, float*, float*, float*)	48	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/bits/stl_algobase.h:258:5:constexpr const _Tp& std::max(const _Tp&, const _Tp&) [with _Tp = float]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:378:6:void tflite::FakeQuantizeArray(float, float, float, const float*, float*, float)	56	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:395:6:bool tflite::CheckedLog2(float, int*)	40	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/quantization_util.cpp:407:6:void tflite::QuantizeMultiplierArray(const double*, size_t, int32_t*, int*)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/cppmath.h:35:1:T tflite::TfLiteRound(T) [with T = double]	16	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/bits/stl_algobase.h:234:5:constexpr const _Tp& std::min(const _Tp&, const _Tp&) [with _Tp = double]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/cppmath.h:35:1:T tflite::TfLiteRound(T) [with T = float]	16	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/bits/stl_algobase.h:234:5:constexpr const _Tp& std::min(const _Tp&, const _Tp&) [with _Tp = float]	16	static

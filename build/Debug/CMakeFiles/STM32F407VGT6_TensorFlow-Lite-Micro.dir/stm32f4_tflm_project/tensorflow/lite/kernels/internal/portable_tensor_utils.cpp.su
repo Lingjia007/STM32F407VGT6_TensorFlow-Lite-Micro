@@ -1,0 +1,10 @@
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/cmath:1232:3:constexpr bool std::signbit(float)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/portable_tensor_utils.cpp:41:6:void tflite::tensor_utils::ApplyReluToVector(const float*, int, float*)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/portable_tensor_utils.cpp:49:6:void tflite::tensor_utils::ApplyRelu1ToVector(const float*, int, float*)	40	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/portable_tensor_utils.cpp:57:6:void tflite::tensor_utils::ApplyRelu6ToVector(const float*, int, float*)	40	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/portable_tensor_utils.cpp:65:6:void tflite::tensor_utils::ApplySignbitToVector(const float*, int, float*)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/portable_tensor_utils.cpp:72:6:void tflite::tensor_utils::UnpackDenseInt4IntoInt8(const int8_t*, int, int8_t*)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/portable_tensor_utils.cpp:96:6:void tflite::tensor_utils::UnpackPackedIntToInt8(const int8_t*, int, int, int8_t*, bool)	56	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/portable_tensor_utils.cpp:166:6:void tflite::tensor_utils::PackInt8IntoDenseInt(const int8_t*, int, int, int8_t*)	48	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/bits/stl_algobase.h:258:5:constexpr const _Tp& std::max(const _Tp&, const _Tp&) [with _Tp = float]	16	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/bits/stl_algobase.h:234:5:constexpr const _Tp& std::min(const _Tp&, const _Tp&) [with _Tp = float]	16	static

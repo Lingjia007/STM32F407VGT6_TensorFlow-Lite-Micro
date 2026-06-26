@@ -1,0 +1,19 @@
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/bits/std_abs.h:77:3:constexpr double std::abs(double)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/kernel_util.h:153:12:int tflite::NumDimensions(const TfLiteTensor*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/kernel_util.h:158:12:int tflite::NumInputs(const TfLiteNode*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:181:22:tflite::MicroContext* tflite::GetMicroContext(const TfLiteContext*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/cmsis_nn/svdf.cpp:54:7:void* tflite::{anonymous}::Init(TfLiteContext*, const char*, size_t)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/cmsis_nn/svdf.cpp:59:14:TfLiteStatus tflite::{anonymous}::CmsisNnPrepareSvdf(TfLiteContext*, TfLiteNode*)	128	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/cmsis_nn/svdf.cpp:249:14:TfLiteStatus tflite::{anonymous}::EvalIntegerSVDF(TfLiteContext*, TfLiteNode*, const TfLiteEvalTensor*, const TfLiteEvalTensor*, const TfLiteEvalTensor*, const TfLiteEvalTensor*, const TfLiteSVDFParams*, TfLiteEvalTensor*, TfLiteEvalTensor*, const CmsisNnOpDataSvdf&)	288	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/cmsis_nn/svdf.cpp:369:14:TfLiteStatus tflite::{anonymous}::EvalSvdf(TfLiteContext*, TfLiteNode*)	80	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/cmsis_nn/svdf.cpp:413:14:TfLiteStatus tflite::{anonymous}::EvalSvdfInt8(TfLiteContext*, TfLiteNode*)	72	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/cmsis_nn/svdf.cpp:445:18:TFLMRegistration tflite::Register_SVDF()	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/cmsis_nn/svdf.cpp:449:18:TFLMRegistration tflite::Register_SVDF_INT8()	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_log.h:42:6:) [with Args = {const char (&)[81]}]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_util.h:76:4:T* tflite::micro::GetTensorData(TfLiteEvalTensor*) [with T = signed char]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_util.h:83:10:const T* tflite::micro::GetTensorData(const TfLiteEvalTensor*) [with T = signed char]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_util.h:83:10:const T* tflite::micro::GetTensorData(const TfLiteEvalTensor*) [with T = long int]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_util.h:76:4:T* tflite::micro::GetTensorData(TfLiteEvalTensor*) [with T = short int]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_util.h:83:10:const T* tflite::micro::GetTensorData(const TfLiteEvalTensor*) [with T = short int]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_log.h:42:6:) [with Args = {const char (&)[46], const char*}]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_log.h:42:6:) [with Args = {const char (&)[33], const char*}]	16	static

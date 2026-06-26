@@ -1,0 +1,10 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/compiler/mlir/lite/core/api/error_reporter.h:37:11:tflite::ErrorReporter::~ErrorReporter()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/compiler/mlir/lite/core/api/error_reporter.h:37:11:virtual tflite::ErrorReporter::~ErrorReporter()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/tflite_bridge/micro_error_reporter.h:28:3:tflite::MicroErrorReporter::~MicroErrorReporter()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/tflite_bridge/micro_error_reporter.h:28:3:virtual tflite::MicroErrorReporter::~MicroErrorReporter()	16	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/new:206:7:void* operator new(std::size_t, void*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/compiler/mlir/lite/core/api/error_reporter.h:35:7:constexpr tflite::ErrorReporter::ErrorReporter()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/tflite_bridge/micro_error_reporter.h:26:7:constexpr tflite::MicroErrorReporter::MicroErrorReporter()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/tflite_bridge/micro_error_reporter.cpp:31:16:tflite::ErrorReporter* tflite::GetMicroErrorReporter()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/tflite_bridge/micro_error_reporter.cpp:38:5:virtual int tflite::MicroErrorReporter::Report(const char*, va_list)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_log.h:42:6:) [with Args = {const char*&, __va_list&}]	16	static

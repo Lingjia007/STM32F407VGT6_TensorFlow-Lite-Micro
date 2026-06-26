@@ -1,0 +1,3 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/cmsis_nn/Source/TransposeFunctions/arm_transpose_s8.c:43:28:arm_transpose_s8_nhcw	88	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/cmsis_nn/Source/TransposeFunctions/arm_transpose_s8.c:126:28:arm_transpose_s8_default	64	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/cmsis_nn/Source/TransposeFunctions/arm_transpose_s8.c:166:21:arm_transpose_s8	128	static

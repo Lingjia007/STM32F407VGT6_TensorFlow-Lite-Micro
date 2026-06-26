@@ -1,0 +1,17 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/runtime_shape.h:52:3:tflite::RuntimeShape::RuntimeShape(int, const int32_t*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/runtime_shape.h:64:3:tflite::RuntimeShape::~RuntimeShape()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/runtime_shape.h:83:12:int32_t* tflite::RuntimeShape::DimsData()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/runtime_shape.h:84:18:const int32_t* tflite::RuntimeShape::DimsData() const	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/runtime_shape.h:87:8:void tflite::RuntimeShape::ReplaceWith(int, const int32_t*)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/runtime_shape.h:96:7:int tflite::RuntimeShape::FlatSize() const	32	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1685:7:static constexpr float std::numeric_limits<float>::max()	4	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1689:7:static constexpr float std::numeric_limits<float>::lowest()	4	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/padding.h:32:12:int tflite::ComputePaddingWithOffset(int, int, int, int, int, int*)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/padding.h:44:12:int tflite::ComputeOutSize(TfLitePadding, int, int, int, int)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/padding.h:62:28:TfLitePaddingValues tflite::ComputePaddingHeightWidth(int, int, int, int, int, int, int, int, TfLitePadding, int*, int*)	40	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:181:22:tflite::MicroContext* tflite::GetMicroContext(const TfLiteContext*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/depthwise_conv_common.cpp:42:17:tflite::DepthwiseParams tflite::DepthwiseConvParamsFloat(const TfLiteDepthwiseConvParams&, const OpDataConv&)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/depthwise_conv_common.cpp:60:17:tflite::DepthwiseParams tflite::DepthwiseConvParamsQuantized(const TfLiteDepthwiseConvParams&, const OpDataConv&)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/depthwise_conv_common.cpp:81:14:TfLiteStatus tflite::CalculateOpDataDepthwiseConv(TfLiteContext*, TfLiteNode*, const TfLiteDepthwiseConvParams&, int, int, int, int, int, int, TfLiteType, OpDataConv*)	136	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/depthwise_conv_common.cpp:139:14:TfLiteStatus tflite::DepthwiseConvPrepare(TfLiteContext*, TfLiteNode*)	144	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/kernel_util.h:285:6:void tflite::CalculateActivationRange(TfLiteFusedActivation, T*, T*) [with T = float]	24	static

@@ -1,0 +1,3 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/cmsis_nn/Source/ConvolutionFunctions/arm_depthwise_conv_s16.c:43:25:depthwise_conv_s16_mult_4_s16	432	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/cmsis_nn/Source/ConvolutionFunctions/arm_depthwise_conv_s16.c:133:13:depthwise_conv_s16_generic_s16	200	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/cmsis_nn/Source/ConvolutionFunctions/arm_depthwise_conv_s16.c:244:21:arm_depthwise_conv_s16	160	static

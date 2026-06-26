@@ -1,0 +1,5 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/micro/kernels/fft_auto_scale_kernel.cpp:35:14:TfLiteStatus tflite::{anonymous}::FftAutoScaleEval(TfLiteContext*, TfLiteNode*)	40	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/micro/kernels/fft_auto_scale_kernel.cpp:57:19:TFLMRegistration* tflite::tflm_signal::Register_FFT_AUTO_SCALE()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_util.h:83:10:const T* tflite::micro::GetTensorData(const TfLiteEvalTensor*) [with T = short int]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_util.h:76:4:T* tflite::micro::GetTensorData(TfLiteEvalTensor*) [with T = short int]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_util.h:76:4:T* tflite::micro::GetTensorData(TfLiteEvalTensor*) [with T = long int]	16	static

@@ -1,0 +1,8 @@
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:532:7:static constexpr signed char std::numeric_limits<signed char>::min()	4	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:535:7:static constexpr signed char std::numeric_limits<signed char>::max()	4	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_utils.h:151:12:int tflite::QMinFromTfLiteType(TfLiteType)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_utils.h:159:12:int tflite::QMaxFromTfLiteType(TfLiteType)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_utils.cpp:30:5:int tflite::ElementCount(const TfLiteIntArray&)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_utils.cpp:38:8:size_t tflite::EvalTensorBytes(const TfLiteEvalTensor*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_utils.cpp:45:6:void tflite::SignedSymmetricPerChannelQuantize(const float*, TfLiteIntArray*, int, int8_t*, float*, TfLiteType)	104	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_log.h:42:6:) [with Args = {const char (&)[35]}]	16	static

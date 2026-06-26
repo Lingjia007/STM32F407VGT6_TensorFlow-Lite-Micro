@@ -1,0 +1,15 @@
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/new:206:7:void* operator new(std::size_t, void*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:33:7:void* tflite::{anonymous}::InitReduce(TfLiteContext*, const char*, size_t)	40	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:39:14:TfLiteStatus tflite::{anonymous}::PrepareMinMax(TfLiteContext*, TfLiteNode*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:44:14:TfLiteStatus tflite::{anonymous}::PrepareMeanOrSum(TfLiteContext*, TfLiteNode*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:49:14:TfLiteStatus tflite::{anonymous}::PrepareAll(TfLiteContext*, TfLiteNode*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:54:14:TfLiteStatus tflite::{anonymous}::EvalMean(TfLiteContext*, TfLiteNode*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:59:14:TfLiteStatus tflite::{anonymous}::EvalMax(TfLiteContext*, TfLiteNode*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:64:14:TfLiteStatus tflite::{anonymous}::EvalMin(TfLiteContext*, TfLiteNode*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:69:14:TfLiteStatus tflite::{anonymous}::EvalSum(TfLiteContext*, TfLiteNode*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:74:14:TfLiteStatus tflite::{anonymous}::EvalAll(TfLiteContext*, TfLiteNode*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:81:18:TFLMRegistration tflite::Register_MEAN()	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:85:18:TFLMRegistration tflite::Register_REDUCE_MAX()	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:89:18:TFLMRegistration tflite::Register_REDUCE_MIN()	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:93:18:TFLMRegistration tflite::Register_SUM()	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/reduce.cpp:97:18:TFLMRegistration tflite::Register_REDUCE_ALL()	24	static

@@ -392,44 +392,44 @@
   ],
   "environment": {
     "generated_model": {
-      "generated_time": "2026-06-25T22:13:46+0800",
+      "generated_time": "2026-06-26T18:09:20+0800",
       "model_files": [
         {
           "name": "micro_speech_quantized_data_params.h",
-          "signature": "0x043880d65bcdd72ad994f95b91a80e44"
+          "signature": "0xa05240a81a0316e225d2e8a22ef8642f"
         },
         {
           "name": "micro_speech_quantized_data_params.c",
-          "signature": "0x691fc2a47f90d69adb39ed5102e4f516"
+          "signature": "0xf6ebc022e0a809cb84da5da9ad14e800"
         },
         {
           "name": "micro_speech_quantized_data.h",
-          "signature": "0x83b08cb965faca1eea8d2c02bb3f71ee"
+          "signature": "0x96b48432fda8a59dac967cd85ce2ecd0"
         },
         {
           "name": "micro_speech_quantized_data.c",
-          "signature": "0x8be7dab88e3f2446ff2f994731e0ffb3"
+          "signature": "0x7e45d1699661cc3f908a309dd58d32bc"
         },
         {
           "name": "micro_speech_quantized_config.h",
-          "signature": "0xc588b30045798696633d9757146ee847"
+          "signature": "0x2a7702659dd2d0ceee2730fc31b55c2e"
         },
         {
           "name": "micro_speech_quantized.h",
-          "signature": "0x5e3e8a994d91516fe04c5573b130bbe0"
+          "signature": "0xdd7d60e17a8bb9a2b5fcae2440ea6504"
         },
         {
           "name": "micro_speech_quantized.c",
-          "signature": "0x07c443c05d8f8b491153a81c95895885"
+          "signature": "0x0ef78b2f39ce229525ef696d2a00e368"
         }
       ],
       "name": "micro_speech_quantized"
     },
-    "network_signature": "0xc362dac31405dda5",
+    "network_signature": "0x2fdec948a992478b",
     "test_name": "",
     "tools": [
       {
-        "arguments": "generate --target stm32f4 --name micro_speech_quantized -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/examples/micro_speech/models/micro_speech_quantized.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace231218097232001032701290483991424 --output C:/Users/31254/.stm32cubemx/micro_speech_quantized_output",
+        "arguments": "generate --target stm32f4 --name micro_speech_quantized -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/examples/micro_speech/models/micro_speech_quantized.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace54978274266004918951197416535802 --output C:/Users/31254/.stm32cubemx/micro_speech_quantized_output",
         "environment": [
           "STATS_TYPE=X-CUBE-AI"
         ],

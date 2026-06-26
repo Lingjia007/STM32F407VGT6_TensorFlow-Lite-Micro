@@ -1,0 +1,16 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/flatbuffers/include/flatbuffers/table.h:29:18:const uint8_t* flatbuffers::Table::GetVTable() const	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/flatbuffers/include/flatbuffers/table.h:35:13:flatbuffers::voffset_t flatbuffers::Table::GetOptionalFieldOffset(flatbuffers::voffset_t) const	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/schema/schema_generated.h:14791:10:int8_t tflite::OperatorCode::deprecated_builtin_code() const	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/schema/schema_generated.h:14800:27:tflite::BuiltinOperator tflite::OperatorCode::builtin_code() const	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/compiler/mlir/lite/schema/schema_utils.cpp:49:17:tflite::BuiltinOperator tflite::GetBuiltinCode(const OperatorCode*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/compiler/mlir/lite/schema/schema_utils.cpp:58:17:tflite::BuiltinOperator tflite::GetBuiltinCode(const OperatorCodeT*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/compiler/mlir/lite/schema/schema_utils.cpp:66:8:size_t tflite::TensorTypeGetSize(TensorType)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/flatbuffers/include/flatbuffers/base.h:437:3:T flatbuffers::ReadScalar(const void*) [with T = long int]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/flatbuffers/include/flatbuffers/base.h:437:3:T flatbuffers::ReadScalar(const void*) [with T = short unsigned int]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/flatbuffers/include/flatbuffers/table.h:46:5:T flatbuffers::Table::GetField(flatbuffers::voffset_t, T) const [with T = long int]	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/flatbuffers/include/flatbuffers/table.h:46:5:T flatbuffers::Table::GetField(flatbuffers::voffset_t, T) const [with T = signed char]	24	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/bits/stl_algobase.h:258:5:constexpr const _Tp& std::max(const _Tp&, const _Tp&) [with _Tp = tflite::BuiltinOperator]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/flatbuffers/include/flatbuffers/base.h:426:24:T flatbuffers::EndianScalar(T) [with T = long int]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/flatbuffers/include/flatbuffers/base.h:426:24:T flatbuffers::EndianScalar(T) [with T = short unsigned int]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/flatbuffers/include/flatbuffers/base.h:437:3:T flatbuffers::ReadScalar(const void*) [with T = signed char]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/third_party/flatbuffers/include/flatbuffers/base.h:426:24:T flatbuffers::EndianScalar(T) [with T = signed char]	16	static

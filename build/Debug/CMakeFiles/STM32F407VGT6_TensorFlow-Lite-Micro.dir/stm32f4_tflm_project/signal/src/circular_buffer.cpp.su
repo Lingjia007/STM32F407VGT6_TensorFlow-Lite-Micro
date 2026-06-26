@@ -1,0 +1,21 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:27:6:void tflite::tflm_signal::CircularBufferReset(CircularBuffer*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:35:8:size_t tflite::tflm_signal::CircularBufferGetNeededMemory(size_t)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:39:17:tflite::tflm_signal::CircularBuffer* tflite::tflm_signal::CircularBufferInit(size_t, void*, size_t)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:49:8:size_t tflite::tflm_signal::CircularBufferCapacity(const CircularBuffer*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:53:6:bool tflite::tflm_signal::CircularBufferFull(const CircularBuffer*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:57:6:bool tflite::tflm_signal::CircularBufferEmpty(const CircularBuffer*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:61:8:size_t tflite::tflm_signal::CircularBufferAvailable(const CircularBuffer*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:74:8:size_t tflite::tflm_signal::CircularBufferCanWrite(const CircularBuffer*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:78:6:void tflite::tflm_signal::CircularBufferAdd(CircularBuffer*, int16_t)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:88:6:void tflite::tflm_signal::CircularBufferWrite(CircularBuffer*, const int16_t*, size_t)	56	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:117:6:void tflite::tflm_signal::CircularBufferWriteZeros(CircularBuffer*, size_t)	48	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:145:10:int16_t* tflite::tflm_signal::CircularBufferReserveForWrite(CircularBuffer*, size_t)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:157:6:void tflite::tflm_signal::CircularBufferExtend(CircularBuffer*, size_t, int32_t)	48	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:186:9:int16_t tflite::tflm_signal::CircularBufferRemove(CircularBuffer*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:198:9:int16_t tflite::tflm_signal::CircularBufferPeek(const CircularBuffer*, size_t)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:208:6:void tflite::tflm_signal::CircularBufferRewind(CircularBuffer*, size_t)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:219:16:const int16_t* tflite::tflm_signal::CircularBufferPeekDirect(const CircularBuffer*, size_t)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:229:16:const int16_t* tflite::tflm_signal::CircularBufferPeekMax(const CircularBuffer*, size_t*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:241:6:void tflite::tflm_signal::CircularBufferGet(CircularBuffer*, size_t, int16_t*)	56	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:260:6:void tflite::tflm_signal::CircularBufferDiscard(CircularBuffer*, size_t)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/signal/src/circular_buffer.cpp:272:6:void tflite::tflm_signal::CircularBufferShift(CircularBuffer*, int)	16	static

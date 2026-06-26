@@ -1,0 +1,21 @@
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/cmath:169:3:constexpr float std::ceil(float)	16	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1072:7:static constexpr int std::numeric_limits<int>::min()	4	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1075:7:static constexpr int std::numeric_limits<int>::max()	4	static
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:1079:7:static constexpr int std::numeric_limits<int>::lowest()	8	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/runtime_shape.h:64:3:tflite::RuntimeShape::~RuntimeShape()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/runtime_shape.h:67:11:int32_t tflite::RuntimeShape::Dims(int) const	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/strided_slice_logic.h:29:12:int tflite::strided_slice::Clamp(int, int, int)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/strided_slice_logic.h:142:12:int tflite::strided_slice::StartForAxis(const tflite::StridedSliceParams&, const tflite::RuntimeShape&, int)	48	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/strided_slice_logic.h:189:12:int tflite::strided_slice::StopForAxis(const tflite::StridedSliceParams&, const tflite::RuntimeShape&, int, int)	48	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/kernel_util.h:153:12:int tflite::NumDimensions(const TfLiteTensor*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/kernel_util.h:158:12:int tflite::NumInputs(const TfLiteNode*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/kernel_util.h:161:12:int tflite::NumOutputs(const TfLiteNode*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/kernel_util.h:203:13:bool tflite::IsConstantTensor(const TfLiteTensor*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:181:22:tflite::MicroContext* tflite::GetMicroContext(const TfLiteContext*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/strided_slice_common.cpp:33:3:tflite::{anonymous}::StridedSliceContext::StridedSliceContext(TfLiteContext*, TfLiteNode*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/strided_slice_common.cpp:47:3:tflite::{anonymous}::StridedSliceContext::~StridedSliceContext()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/strided_slice_common.cpp:68:28:tflite::StridedSliceParams tflite::{anonymous}::BuildStridedSliceParams(StridedSliceContext*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/strided_slice_common.cpp:92:14:TfLiteStatus tflite::{anonymous}::CheckOutputSize(TfLiteContext*, StridedSliceContext*)	168	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/strided_slice_common.cpp:129:7:void* tflite::StridedSliceInit(TfLiteContext*, const char*, size_t)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/strided_slice_common.cpp:135:14:TfLiteStatus tflite::StridedSlicePrepare(TfLiteContext*, TfLiteNode*)	144	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/tensor_ctypes.h:27:11:T* tflite::GetTensorData(TfLiteTensor*) [with T = long int]	16	static

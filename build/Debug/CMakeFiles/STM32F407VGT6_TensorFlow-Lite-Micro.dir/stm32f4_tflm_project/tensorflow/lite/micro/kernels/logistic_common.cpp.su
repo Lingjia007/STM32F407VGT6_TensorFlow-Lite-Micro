@@ -1,0 +1,5 @@
+C:/Tools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/limits:532:7:static constexpr signed char std::numeric_limits<signed char>::min()	4	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:181:22:tflite::MicroContext* tflite::GetMicroContext(const TfLiteContext*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/logistic_common.cpp:32:14:TfLiteStatus tflite::CalculateArithmeticOpDataLogistic(TfLiteContext*, TfLiteNode*, OpDataLogistic*)	88	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/logistic_common.cpp:112:14:TfLiteStatus tflite::LogisticPrepare(TfLiteContext*, TfLiteNode*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/kernels/internal/cppmath.h:35:1:T tflite::TfLiteRound(T) [with T = double]	16	static

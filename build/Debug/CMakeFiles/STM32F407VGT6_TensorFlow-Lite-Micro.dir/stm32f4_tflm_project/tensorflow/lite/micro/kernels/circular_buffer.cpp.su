@@ -1,0 +1,7 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/circular_buffer.cpp:52:7:void* tflite::CircularBufferInit(TfLiteContext*, const char*, size_t)	48	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/circular_buffer.cpp:72:6:void tflite::EvalInt8(const int8_t*, int, int, int8_t*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/circular_buffer.cpp:77:14:TfLiteStatus tflite::CircularBufferEval(TfLiteContext*, TfLiteNode*)	48	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/circular_buffer.cpp:110:19:TFLMRegistration* tflite::Register_CIRCULAR_BUFFER()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_util.h:83:10:const T* tflite::micro::GetTensorData(const TfLiteEvalTensor*) [with T = signed char]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_util.h:76:4:T* tflite::micro::GetTensorData(TfLiteEvalTensor*) [with T = signed char]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_log.h:42:6:) [with Args = {const char (&)[28], const char*, const TfLiteType&}]	24	static

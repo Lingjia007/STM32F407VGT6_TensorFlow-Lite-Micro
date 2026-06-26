@@ -1,0 +1,17 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:181:22:tflite::MicroContext* tflite::GetMicroContext(const TfLiteContext*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:190:14:void* tflite::MicroContextAllocatePersistentBuffer(TfLiteContext*, size_t)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:194:21:TfLiteStatus tflite::MicroContextRequestScratchBufferInArena(TfLiteContext*, size_t, int*)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:199:14:void* tflite::MicroContextGetScratchBuffer(TfLiteContext*, int)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:202:22:TfLiteTensor* tflite::MicroContextGetTensor(const TfLiteContext*, int)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:206:26:TfLiteEvalTensor* tflite::MicroContextGetEvalTensor(const TfLiteContext*, int)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:210:31:TfLiteExternalContext* tflite::MicroContextGetExternalContext(TfLiteContext*, TfLiteExternalContextType)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_runner.cpp:29:6:void tflite::micro::ClearBufferApi(TfLiteContext*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_runner.cpp:36:1:tflite::micro::KernelRunner::KernelRunner(const TFLMRegistration&, TfLiteTensor*, int, TfLiteIntArray*, TfLiteIntArray*, const void*, TfLiteIntArray*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_runner.cpp:74:6:bool tflite::micro::KernelRunner::ValidateTempBufferDeallocated()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_runner.cpp:78:14:TfLiteStatus tflite::micro::KernelRunner::InitAndPrepare(const char*, size_t)	32	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_runner.cpp:102:14:TfLiteStatus tflite::micro::KernelRunner::Invoke()	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_runner.cpp:118:14:TfLiteStatus tflite::micro::KernelRunner::Reset()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/kernel_runner.cpp:131:14:TfLiteStatus tflite::micro::KernelRunner::Free()	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_log.h:42:6:) [with Args = {const char (&)[50]}]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_log.h:42:6:) [with Args = {const char (&)[49]}]	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_log.h:42:6:) [with Args = {const char (&)[48]}]	16	static

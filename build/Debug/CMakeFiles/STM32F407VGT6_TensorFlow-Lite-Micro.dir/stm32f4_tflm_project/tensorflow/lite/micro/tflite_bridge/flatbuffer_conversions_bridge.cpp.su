@@ -1,0 +1,2 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/tflite_bridge/flatbuffer_conversions_bridge.cpp:24:14:TfLiteStatus tflite::ConvertTensorType(TensorType, TfLiteType*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/tflite_bridge/flatbuffer_conversions_bridge.cpp:28:14:TfLiteStatus tflite::CallBuiltinParseFunction(TfLiteBridgeBuiltinParseFunction, const Operator*, BuiltinDataAllocator*, void**)	32	static

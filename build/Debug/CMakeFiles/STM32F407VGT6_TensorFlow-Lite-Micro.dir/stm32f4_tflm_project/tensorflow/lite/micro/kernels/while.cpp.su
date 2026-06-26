@@ -1,0 +1,5 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:181:22:tflite::MicroContext* tflite::GetMicroContext(const TfLiteContext*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/while.cpp:39:7:void* tflite::{anonymous}::WhileInit(TfLiteContext*, const char*, size_t)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/while.cpp:44:14:TfLiteStatus tflite::{anonymous}::WhilePrepare(TfLiteContext*, TfLiteNode*)	48	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/while.cpp:77:14:TfLiteStatus tflite::{anonymous}::WhileEval(TfLiteContext*, TfLiteNode*)	56	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/while.cpp:129:18:TFLMRegistration tflite::Register_WHILE()	24	static

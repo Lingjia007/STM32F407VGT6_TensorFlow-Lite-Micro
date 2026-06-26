@@ -1,0 +1,6 @@
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_context.h:181:22:tflite::MicroContext* tflite::GetMicroContext(const TfLiteContext*)	16	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/var_handle.cpp:39:7:void* tflite::{anonymous}::VarHandleInit(TfLiteContext*, const char*, size_t)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/var_handle.cpp:44:14:TfLiteStatus tflite::{anonymous}::VarHandlePrepare(TfLiteContext*, TfLiteNode*)	40	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/var_handle.cpp:75:14:TfLiteStatus tflite::{anonymous}::VarHandleEval(TfLiteContext*, TfLiteNode*)	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/kernels/var_handle.cpp:89:18:TFLMRegistration tflite::Register_VAR_HANDLE()	24	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/tensorflow/lite/micro/micro_log.h:42:6:) [with Args = {const char (&)[104]}]	16	static
