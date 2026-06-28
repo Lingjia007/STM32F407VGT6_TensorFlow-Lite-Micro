@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    micro_speech_quantized_data.c
   * @author  AST Embedded Analytics Research Platform
-  * @date    2026-06-26T20:16:24+0800
+  * @date    2026-06-28T17:58:17+0800
   * @brief   AI Tool Automatic Code Generator for Embedded NN computing
   ******************************************************************************
   * @attention
@@ -21,13 +21,13 @@
 AI_API_DECLARE_BEGIN
 ai_buffer g_micro_speech_quantized_data_map_activations[AI_MICRO_SPEECH_QUANTIZED_DATA_ACTIVATIONS_COUNT] = {
   AI_BUFFER_INIT(AI_FLAG_NONE,  AI_BUFFER_FORMAT_U8,
-    AI_BUFFER_SHAPE_INIT(AI_SHAPE_BCWH, 4, 1, 12004, 1, 1),
-    12004, NULL, NULL),    /* heap_overlay_pool */
+    AI_BUFFER_SHAPE_INIT(AI_SHAPE_BCWH, 4, 1, 12132, 1, 1),
+    12132, NULL, NULL),    /* heap_overlay_pool */
   };
 ai_buffer g_micro_speech_quantized_data_map_weights[AI_MICRO_SPEECH_QUANTIZED_DATA_WEIGHTS_COUNT] = {
   AI_BUFFER_INIT(AI_FLAG_NONE,  AI_BUFFER_FORMAT_U8,
-    AI_BUFFER_SHAPE_INIT(AI_SHAPE_BCWH, 4, 1, 16688, 1, 1),
-    16688, NULL, s_micro_speech_quantized_weights_array_u64),   /* weights_array */
+    AI_BUFFER_SHAPE_INIT(AI_SHAPE_BCWH, 4, 1, 48720, 1, 1),
+    48720, NULL, s_micro_speech_quantized_weights_array_u64),   /* weights_array */
   };
 
 

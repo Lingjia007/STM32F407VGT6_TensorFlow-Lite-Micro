@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    micro_speech_quantized.h
   * @author  AST Embedded Analytics Research Platform
-  * @date    2026-06-26T20:16:24+0800
+  * @date    2026-06-28T17:58:17+0800
   * @brief   AI Tool Automatic Code Generator for Embedded NN computing
   ******************************************************************************
   * @attention
@@ -23,7 +23,7 @@
 
 /******************************************************************************/
 #define AI_MICRO_SPEECH_QUANTIZED_MODEL_NAME          "micro_speech_quantized"
-#define AI_MICRO_SPEECH_QUANTIZED_ORIGIN_MODEL_NAME   "micro_speech_quantized"
+#define AI_MICRO_SPEECH_QUANTIZED_ORIGIN_MODEL_NAME   "model"
 
 /******************************************************************************/
 #define AI_MICRO_SPEECH_QUANTIZED_ACTIVATIONS_ALIGNMENT   (4)
@@ -62,9 +62,9 @@ AI_DEPRECATED
   AI_MICRO_SPEECH_QUANTIZED_OUT_1_SIZE_BYTES, \
 }
 #define AI_MICRO_SPEECH_QUANTIZED_OUT_1_FORMAT      (AI_BUFFER_FORMAT_S8)
-#define AI_MICRO_SPEECH_QUANTIZED_OUT_1_CHANNEL     (4)
-#define AI_MICRO_SPEECH_QUANTIZED_OUT_1_SIZE        (4)
-#define AI_MICRO_SPEECH_QUANTIZED_OUT_1_SIZE_BYTES  (4)
+#define AI_MICRO_SPEECH_QUANTIZED_OUT_1_CHANNEL     (12)
+#define AI_MICRO_SPEECH_QUANTIZED_OUT_1_SIZE        (12)
+#define AI_MICRO_SPEECH_QUANTIZED_OUT_1_SIZE_BYTES  (12)
 
 /******************************************************************************/
 #define AI_MICRO_SPEECH_QUANTIZED_N_NODES (3)

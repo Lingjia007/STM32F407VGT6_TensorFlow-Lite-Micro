@@ -38,6 +38,22 @@ extern const int16_t *tflm_test_audio_silence(void);
 extern size_t tflm_test_audio_silence_size(void);
 extern const int16_t *tflm_test_audio_noise(void);
 extern size_t tflm_test_audio_noise_size(void);
+extern const int16_t *tflm_test_audio_down(void);
+extern size_t tflm_test_audio_down_size(void);
+extern const int16_t *tflm_test_audio_go(void);
+extern size_t tflm_test_audio_go_size(void);
+extern const int16_t *tflm_test_audio_left(void);
+extern size_t tflm_test_audio_left_size(void);
+extern const int16_t *tflm_test_audio_off(void);
+extern size_t tflm_test_audio_off_size(void);
+extern const int16_t *tflm_test_audio_on(void);
+extern size_t tflm_test_audio_on_size(void);
+extern const int16_t *tflm_test_audio_rigth(void);
+extern size_t tflm_test_audio_rigth_size(void);
+extern const int16_t *tflm_test_audio_stop(void);
+extern size_t tflm_test_audio_stop_size(void);
+extern const int16_t *tflm_test_audio_up(void);
+extern size_t tflm_test_audio_up_size(void);
 
 #ifdef __cplusplus
 }

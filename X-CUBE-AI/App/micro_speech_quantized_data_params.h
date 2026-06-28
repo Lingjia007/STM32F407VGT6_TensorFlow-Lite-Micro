@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    micro_speech_quantized_data_params.h
   * @author  AST Embedded Analytics Research Platform
-  * @date    2026-06-26T20:16:24+0800
+  * @date    2026-06-28T17:58:17+0800
   * @brief   AI Tool Automatic Code Generator for Embedded NN computing
   ******************************************************************************
   * Copyright (c) 2026 STMicroelectronics.
@@ -28,18 +28,18 @@
 
 
 #define AI_MICRO_SPEECH_QUANTIZED_DATA_ACTIVATIONS_SIZES \
-  { 12004, }
-#define AI_MICRO_SPEECH_QUANTIZED_DATA_ACTIVATIONS_SIZE     (12004)
+  { 12132, }
+#define AI_MICRO_SPEECH_QUANTIZED_DATA_ACTIVATIONS_SIZE     (12132)
 #define AI_MICRO_SPEECH_QUANTIZED_DATA_ACTIVATIONS_COUNT    (1)
-#define AI_MICRO_SPEECH_QUANTIZED_DATA_ACTIVATION_1_SIZE    (12004)
+#define AI_MICRO_SPEECH_QUANTIZED_DATA_ACTIVATION_1_SIZE    (12132)
 
 
 
 #define AI_MICRO_SPEECH_QUANTIZED_DATA_WEIGHTS_SIZES \
-  { 16688, }
-#define AI_MICRO_SPEECH_QUANTIZED_DATA_WEIGHTS_SIZE         (16688)
+  { 48720, }
+#define AI_MICRO_SPEECH_QUANTIZED_DATA_WEIGHTS_SIZE         (48720)
 #define AI_MICRO_SPEECH_QUANTIZED_DATA_WEIGHTS_COUNT        (1)
-#define AI_MICRO_SPEECH_QUANTIZED_DATA_WEIGHT_1_SIZE        (16688)
+#define AI_MICRO_SPEECH_QUANTIZED_DATA_WEIGHT_1_SIZE        (48720)
 
 
 

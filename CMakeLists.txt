@@ -292,10 +292,18 @@ set(TFLM_SOURCES
     ${TFLM_BASE}/examples/micro_speech/models/audio_preprocessor_int8_model_data.cpp
 
     # Test audio data
-    ${TFLM_BASE}/examples/micro_speech/testdata/yes_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/down_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/go_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/left_1000ms_audio_data.cpp
     ${TFLM_BASE}/examples/micro_speech/testdata/no_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/silence_1000ms_audio_data.cpp
     ${TFLM_BASE}/examples/micro_speech/testdata/noise_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/off_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/on_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/rigth_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/silence_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/stop_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/up_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/yes_1000ms_audio_data.cpp
 
     # Micro speech TFLM preprocess wrapper
     ${CMAKE_SOURCE_DIR}/X-CUBE-AI/App/micro_speech_tflm_preprocess.cpp

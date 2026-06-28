@@ -1,65 +1,67 @@
 ST Edge AI Core v2.2.0-20266 2adc00962
-Created date          : 2026-06-26 20:16:25
-Parameters            : generate --target stm32f4 --name micro_speech_quantized -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/examples/micro_speech/models/micro_speech_quantized.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace131247801582006104090939567145594 --output C:/Users/31254/.stm32cubemx/micro_speech_quantized_output
+Created date          : 2026-06-28 17:58:18
+Parameters            : generate --target stm32f4 --name micro_speech_quantized -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/model.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace1148702488110017743473288747364901 --output C:/Users/31254/.stm32cubemx/micro_speech_quantized_output
 
 Exec/report summary (generate)
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-model file         :   D:\edgedownload\STM32F407VGT6_TensorFlow-Lite-Micro\stm32f4_tflm_project\examples\micro_speech\models\micro_speech_quantized.tflite   
-type               :   tflite                                                                                                                                
-c_name             :   micro_speech_quantized                                                                                                                
-compression        :   none                                                                                                                                  
-options            :   allocate-inputs, allocate-outputs                                                                                                     
-optimization       :   balanced                                                                                                                              
-target/series      :   stm32f4                                                                                                                               
-workspace dir      :   C:\Users\31254\AppData\Local\Temp\mxAI_workspace131247801582006104090939567145594                                                     
-output dir         :   C:\Users\31254\.stm32cubemx\micro_speech_quantized_output                                                                             
-model_fmt          :   ss/sa per channel                                                                                                                     
-model_name         :   micro_speech_quantized                                                                                                                
-model_hash         :   0xa272bfc090674fd07893ad5679b85571                                                                                                    
-params #           :   16,652 items (16.30 KiB)                                                                                                              
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-input 1/1          :   'Reshape_1', int8(1x1960), 1.91 KBytes, QLinear(0.101715684,-128,int8), activations                                                   
-output 1/1         :   'nl_3', int8(1x4), 4 Bytes, QLinear(0.003906250,-128,int8), activations                                                               
-macc               :   336,072                                                                                                                               
-weights (ro)       :   16,688 B (16.30 KiB) (1 segment) / -49,920(-74.9%) vs float model                                                                     
-activations (rw)   :   12,004 B (11.72 KiB) (1 segment) *                                                                                                    
-ram (total)        :   12,004 B (11.72 KiB) = 12,004 + 0 + 0                                                                                                 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+model file         :   D:\edgedownload\STM32F407VGT6_TensorFlow-Lite-Micro\model.tflite                      
+type               :   tflite                                                                                
+c_name             :   micro_speech_quantized                                                                
+compression        :   none                                                                                  
+options            :   allocate-inputs, allocate-outputs                                                     
+optimization       :   balanced                                                                              
+target/series      :   stm32f4                                                                               
+workspace dir      :   C:\Users\31254\AppData\Local\Temp\mxAI_workspace1148702488110017743473288747364901    
+output dir         :   C:\Users\31254\.stm32cubemx\micro_speech_quantized_output                             
+model_fmt          :   ss/sa per channel                                                                     
+model_name         :   model                                                                                 
+model_hash         :   0xeaa5cd336eb41faef43f68f380b5a320                                                    
+params #           :   48,660 items (47.58 KiB)                                                              
+-------------------------------------------------------------------------------------------------------------
+input 1/1          :   'Reshape_1', int8(1x1960), 1.91 KBytes, QLinear(0.101715684,-128,int8), activations   
+output 1/1         :   'nl_4', int8(1x12), 12 Bytes, QLinear(0.003906250,-128,int8), activations             
+macc               :   368,200                                                                               
+weights (ro)       :   48,720 B (47.58 KiB) (1 segment) / -145,920(-75.0%) vs float model                    
+activations (rw)   :   12,132 B (11.85 KiB) (1 segment) *                                                    
+ram (total)        :   12,132 B (11.85 KiB) = 12,132 + 0 + 0                                                 
+-------------------------------------------------------------------------------------------------------------
 (*) 'input'/'output' buffers are allocated in the activations buffer
 
-Model name - micro_speech_quantized
------- ------------------------------------------------ --------------------- --------------- --------- -------------------------------- --- -------------- ------------------ --------------------- 
-m_id   layer (type,original)                            oshape                param/size           macc                     connected to   | c_size         c_macc             c_type                
------- ------------------------------------------------ --------------------- --------------- --------- -------------------------------- --- -------------- ------------------ --------------------- 
-0      Reshape_1 (Input, )                              [b:1,c:1960]                                                                       |                                   
-       reshape_0 (Reshape, RESHAPE)                     [b:1,h:49,w:40,c:1]                                                    Reshape_1   |                                   
------- ------------------------------------------------ --------------------- --------------- --------- -------------------------------- --- -------------- ------------------ --------------------- 
-1      conv2d_1 (Conv2D, DEPTHWISE_CONV_2D)             [b:1,h:25,w:20,c:8]   648/672           320,008                        reshape_0   |                                   Conv2D_[0]            
-       nl_1_nl (Nonlinearity, DEPTHWISE_CONV_2D)        [b:1,h:25,w:20,c:8]                       4,000                         conv2d_1   |                -4,000(-100.0%)    
------- ------------------------------------------------ --------------------- --------------- --------- -------------------------------- --- -------------- ------------------ --------------------- 
-2      final_fc_weights_r.._transpose (Placeholder, )   [b:4,c:4000]          16,000/16,000                                                | +16(+0.1%)     +16,004(+100.0%)   Dense_[1]             
-       MatMul_bias (Placeholder, )                      [b:4]                 4/16                                                         | -16(-100.0%)                      
-       gemm_2 (Gemm, FULLY_CONNECTED)                   [b:1,c:4]                                16,004                          nl_1_nl   |                -16,004(-100.0%)   
-                                                                                                          final_fc_weights_r.._transpose   | 
-                                                                                                                             MatMul_bias   | 
------- ------------------------------------------------ --------------------- --------------- --------- -------------------------------- --- -------------- ------------------ --------------------- 
-3      nl_3 (Nonlinearity, SOFTMAX)                     [b:1,c:4]                                    60                           gemm_2   |                                   Nonlinearity_[o][2]   
------- ------------------------------------------------ --------------------- --------------- --------- -------------------------------- --- -------------- ------------------ --------------------- 
-model/c-model: macc=340,072/336,072 -4,000(-1.2%) weights=16,688/16,688  activations=--/12,004 io=--/0
+Model name - model
+------ ------------------------------------ --------------------- --------------- --------- -------------------- --- -------------- ------------------ --------------------- 
+m_id   layer (type,original)                oshape                param/size           macc         connected to   | c_size         c_macc             c_type                
+------ ------------------------------------ --------------------- --------------- --------- -------------------- --- -------------- ------------------ --------------------- 
+0      Reshape_1 (Input, )                  [b:1,c:1960]                                                           |                                   
+       reshape_0 (Reshape, RESHAPE)         [b:1,h:49,w:40,c:1]                                        Reshape_1   |                                   
+------ ------------------------------------ --------------------- --------------- --------- -------------------- --- -------------- ------------------ --------------------- 
+1      conv2d_1 (Conv2D, CONV_2D)           [b:1,h:25,w:20,c:8]   648/672           320,008            reshape_0   |                                   Conv2D_[0]            
+       nl_1_nl (Nonlinearity, CONV_2D)      [b:1,h:25,w:20,c:8]                       4,000             conv2d_1   |                -4,000(-100.0%)    
+------ ------------------------------------ --------------------- --------------- --------- -------------------- --- -------------- ------------------ --------------------- 
+2      reshape_2 (Reshape, RESHAPE)         [b:1,c:4000]                                                 nl_1_nl   |                                   
+------ ------------------------------------ --------------------- --------------- --------- -------------------- --- -------------- ------------------ --------------------- 
+3      tfl_pseudo_qconst1 (Placeholder, )   [b:12,c:4000]         48,000/48,000                                    | +48(+0.1%)     +48,012(+100.0%)   Dense_[1]             
+       tfl_pseudo_qconst (Placeholder, )    [b:12]                12/48                                            | -48(-100.0%)                      
+       gemm_3 (Gemm, FULLY_CONNECTED)       [b:1,c:12]                               48,012            reshape_2   |                -48,012(-100.0%)   
+                                                                                              tfl_pseudo_qconst1   | 
+                                                                                               tfl_pseudo_qconst   | 
+------ ------------------------------------ --------------------- --------------- --------- -------------------- --- -------------- ------------------ --------------------- 
+4      nl_4 (Nonlinearity, SOFTMAX)         [b:1,c:12]                                  180               gemm_3   |                                   Nonlinearity_[o][2]   
+------ ------------------------------------ --------------------- --------------- --------- -------------------- --- -------------- ------------------ --------------------- 
+model/c-model: macc=372,200/368,200 -4,000(-1.1%) weights=48,720/48,720  activations=--/12,132 io=--/0
 
 
 
 Generated C-graph summary
 ------------------------------------------------------------------------------------------------------------------------
-model name            : micro_speech_quantized
+model name            : model
 c-name                : micro_speech_quantized
 c-node #              : 3
 c-array #             : 11
-activations size      : 12004 (1 segment)
-weights size          : 16688 (1 segment)
-macc                  : 336072
+activations size      : 12132 (1 segment)
+weights size          : 48720 (1 segment)
+macc                  : 368200
 inputs                : ['Reshape_1_output']
-outputs               : ['nl_3_output']
+outputs               : ['nl_4_output']
 
 C-Arrays (11)
 ------ ------------------- ------------- ------------------------- ----------- --------- 
@@ -70,12 +72,12 @@ c_id   name (*_array)      item/size     domain/mem-pool           c-type      c
 2      conv2d_1_output     4000/4000     activations/**default**   s8                    
 3      conv2d_1_scratch0   1712/1712     activations/**default**   s8                    
 4      conv2d_1_weights    640/640       weights/weights           const s8              
-5      gemm_2_bias         4/16          weights/weights           const s32             
-6      gemm_2_output       4/4           activations/**default**   s8                    
-7      gemm_2_scratch0     4000/8000     activations/**default**   s16                   
-8      gemm_2_weights      16000/16000   weights/weights           const s8              
-9      nl_3_output         4/4           activations/**default**   s8          /output   
-10     nl_3_scratch0       248/992       activations/**default**   s32                   
+5      gemm_3_bias         12/48         weights/weights           const s32             
+6      gemm_3_output       12/12         activations/**default**   s8                    
+7      gemm_3_scratch0     4060/8120     activations/**default**   s16                   
+8      gemm_3_weights      48000/48000   weights/weights           const s8              
+9      nl_4_output         12/12         activations/**default**   s8          /output   
+10     nl_4_scratch0       248/992       activations/**default**   s32                   
 ------ ------------------- ------------- ------------------------- ----------- --------- 
 
 C-Layers (3)
@@ -88,15 +90,15 @@ c_id   name (*_layer)   id   layer_type      macc     rom     tensors           
                                                               W: conv2d_1_bias       int32(8) (1)          
                                                               O: conv2d_1_output     int8(1x25x20x8) (2)   
 ------ ---------------- ---- --------------- -------- ------- ---------------------- --------------------- 
-1      gemm_2           2    Dense           16004    16016   I: conv2d_1_output     int8(1x25x20x8) (2)   
-                                                              S: gemm_2_scratch0                           
-                                                              W: gemm_2_weights      int8(4x4000) (8)      
-                                                              W: gemm_2_bias         int32(4) (5)          
-                                                              O: gemm_2_output       int8(1x4) (6)         
+1      gemm_3           3    Dense           48012    48048   I: conv2d_1_output     int8(1x25x20x8) (2)   
+                                                              S: gemm_3_scratch0                           
+                                                              W: gemm_3_weights      int8(12x4000) (8)     
+                                                              W: gemm_3_bias         int32(12) (5)         
+                                                              O: gemm_3_output       int8(1x12) (6)        
 ------ ---------------- ---- --------------- -------- ------- ---------------------- --------------------- 
-2      nl_3             3    Nonlinearity    60       0       I: gemm_2_output       int8(1x4) (6)         
-                                                              S: nl_3_scratch0                             
-                                                              O: nl_3_output         int8(1x4) (9)         
+2      nl_4             4    Nonlinearity    180      0       I: gemm_3_output       int8(1x12) (6)        
+                                                              S: nl_4_scratch0                             
+                                                              O: nl_4_output         int8(1x12) (9)        
 ------ ---------------- ---- --------------- -------- ------- ---------------------- --------------------- 
 
 
@@ -106,44 +108,44 @@ Number of operations per c-layer
 c_id    m_id   name (type)                 #op         type 
 ------- ------ --------------------- --------- ------------ 
 0       1      conv2d_1 (Conv2D)       320,008   smul_s8_s8 
-1       2      gemm_2 (Dense)           16,004   smul_s8_s8 
-2       3      nl_3 (Nonlinearity)          60     op_s8_s8 
+1       3      gemm_3 (Dense)           48,012   smul_s8_s8 
+2       4      nl_4 (Nonlinearity)         180     op_s8_s8 
 ------- ------ --------------------- --------- ------------ 
-total                                  336,072 
+total                                  368,200 
 
 Number of operation types
 ---------------- --------- ----------- 
 operation type           #           % 
 ---------------- --------- ----------- 
-smul_s8_s8         336,012      100.0% 
-op_s8_s8                60        0.0% 
+smul_s8_s8         368,020      100.0% 
+op_s8_s8               180        0.0% 
 
 Complexity report (model)
------- --------------------------------- ------------------------- ------------------------- ------ 
-m_id   name                              c_macc                    c_rom                     c_id   
------- --------------------------------- ------------------------- ------------------------- ------ 
-1      conv2d_1                          ||||||||||||||||  95.2%   |                  4.0%   [0]    
-2      final_fc_weights_read_transpose   |                  4.8%   ||||||||||||||||  96.0%   [1]    
-3      nl_3                              |                  0.0%   |                  0.0%   [2]    
------- --------------------------------- ------------------------- ------------------------- ------ 
-macc=336,072 weights=16,688 act=12,004 ram_io=0
+------ -------------------- ------------------------- ------------------------- ------ 
+m_id   name                 c_macc                    c_rom                     c_id   
+------ -------------------- ------------------------- ------------------------- ------ 
+1      conv2d_1             ||||||||||||||||  86.9%   |                  1.4%   [0]    
+3      tfl_pseudo_qconst1   |||               13.0%   ||||||||||||||||  98.6%   [1]    
+4      nl_4                 |                  0.0%   |                  0.0%   [2]    
+------ -------------------- ------------------------- ------------------------- ------ 
+macc=368,200 weights=48,720 act=12,132 ram_io=0
  
  Requested memory size by section - "stm32f4" target
  ------------------------------- -------- -------- ------- -------- 
  module                              text   rodata    data      bss 
  ------------------------------- -------- -------- ------- -------- 
- NetworkRuntime1020_CM4_GCC.a      18,964        0       0        0 
- micro_speech_quantized.o             508      213   1,524      116 
+ NetworkRuntime1020_CM4_GCC.a      17,312        0       0        0 
+ micro_speech_quantized.o             508      268   1,524      116 
  micro_speech_quantized_data.o         48       16      88        0 
- lib (toolchain)*                   1,652        0       0        0 
+ lib (toolchain)*                       0        0       0        0 
  ------------------------------- -------- -------- ------- -------- 
- RT total**                        21,172      229   1,612      116 
+ RT total**                        17,868      284   1,612      116 
  ------------------------------- -------- -------- ------- -------- 
- weights                                0   16,688       0        0 
- activations                            0        0       0   12,004 
+ weights                                0   48,720       0        0 
+ activations                            0        0       0   12,132 
  io                                     0        0       0        0 
  ------------------------------- -------- -------- ------- -------- 
- TOTAL                             21,172   16,917   1,612   12,120 
+ TOTAL                             17,868   49,004   1,612   12,248 
  ------------------------------- -------- -------- ------- -------- 
  *  toolchain objects (libm/libgcc*)
  ** RT AI runtime objects (kernels+infrastructure)
@@ -152,9 +154,9 @@ macc=336,072 weights=16,688 act=12,004 ram_io=0
   ---------------------------------------------------
                FLASH (ro)      %*   RAM (rw)       % 
   ---------------------------------------------------
-  RT total         23,013   58.0%      1,728   12.6% 
+  RT total         19,764   28.9%      1,728   12.5% 
   ---------------------------------------------------
-  TOTAL            39,701             13,732         
+  TOTAL            68,484             13,860         
   ---------------------------------------------------
   *  rt/total
 

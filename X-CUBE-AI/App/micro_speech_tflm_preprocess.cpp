@@ -13,10 +13,18 @@
 #include "audio_preprocessor_int8_model_data.h"
 
 /* Test audio data (C++ headers) */
-#include "yes_1000ms_audio_data.h"
+#include "down_1000ms_audio_data.h"
+#include "go_1000ms_audio_data.h"
+#include "left_1000ms_audio_data.h"
 #include "no_1000ms_audio_data.h"
-#include "silence_1000ms_audio_data.h"
 #include "noise_1000ms_audio_data.h"
+#include "off_1000ms_audio_data.h"
+#include "on_1000ms_audio_data.h"
+#include "rigth_1000ms_audio_data.h"
+#include "silence_1000ms_audio_data.h"
+#include "stop_1000ms_audio_data.h"
+#include "up_1000ms_audio_data.h"
+#include "yes_1000ms_audio_data.h"
 
 namespace {
 
@@ -170,5 +178,29 @@ size_t tflm_test_audio_silence_size(void) { return g_silence_1000ms_audio_data_s
 
 const int16_t *tflm_test_audio_noise(void) { return g_noise_1000ms_audio_data; }
 size_t tflm_test_audio_noise_size(void) { return g_noise_1000ms_audio_data_size; }
+
+const int16_t *tflm_test_audio_down(void) { return g_down_1000ms_audio_data; }
+size_t tflm_test_audio_down_size(void) { return g_down_1000ms_audio_data_size; }
+
+const int16_t *tflm_test_audio_go(void) { return g_go_1000ms_audio_data; }
+size_t tflm_test_audio_go_size(void) { return g_go_1000ms_audio_data_size; }
+
+const int16_t *tflm_test_audio_left(void) { return g_left_1000ms_audio_data; }
+size_t tflm_test_audio_left_size(void) { return g_left_1000ms_audio_data_size; }
+
+const int16_t *tflm_test_audio_off(void) { return g_off_1000ms_audio_data; }
+size_t tflm_test_audio_off_size(void) { return g_off_1000ms_audio_data_size; }
+
+const int16_t *tflm_test_audio_on(void) { return g_on_1000ms_audio_data; }
+size_t tflm_test_audio_on_size(void) { return g_on_1000ms_audio_data_size; }
+
+const int16_t *tflm_test_audio_rigth(void) { return g_rigth_1000ms_audio_data; }
+size_t tflm_test_audio_rigth_size(void) { return g_rigth_1000ms_audio_data_size; }
+
+const int16_t *tflm_test_audio_stop(void) { return g_stop_1000ms_audio_data; }
+size_t tflm_test_audio_stop_size(void) { return g_stop_1000ms_audio_data_size; }
+
+const int16_t *tflm_test_audio_up(void) { return g_up_1000ms_audio_data; }
+size_t tflm_test_audio_up_size(void) { return g_up_1000ms_audio_data_size; }
 
 } /* extern "C" */

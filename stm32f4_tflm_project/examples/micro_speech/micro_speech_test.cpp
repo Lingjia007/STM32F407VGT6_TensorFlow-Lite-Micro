@@ -21,10 +21,18 @@ limitations under the License.
 #include "micro_model_settings.h"
 #include "models/audio_preprocessor_int8_model_data.h"
 #include "models/micro_speech_quantized_model_data.h"
+#include "testdata/down_1000ms_audio_data.h"
+#include "testdata/go_1000ms_audio_data.h"
+#include "testdata/left_1000ms_audio_data.h"
 #include "testdata/no_1000ms_audio_data.h"
 #include "testdata/no_30ms_audio_data.h"
 #include "testdata/noise_1000ms_audio_data.h"
+#include "testdata/off_1000ms_audio_data.h"
+#include "testdata/on_1000ms_audio_data.h"
+#include "testdata/rigth_1000ms_audio_data.h"
 #include "testdata/silence_1000ms_audio_data.h"
+#include "testdata/stop_1000ms_audio_data.h"
+#include "testdata/up_1000ms_audio_data.h"
 #include "testdata/yes_1000ms_audio_data.h"
 #include "testdata/yes_30ms_audio_data.h"
 #include "tensorflow/lite/micro/micro_interpreter.h"
@@ -304,6 +312,54 @@ TEST(MicroSpeechTest, SilenceTest) {
 TEST(MicroSpeechTest, NoiseTest) {
   ASSERT_EQ(TestAudioSample("silence", g_noise_1000ms_audio_data,
                             g_noise_1000ms_audio_data_size),
+            kTfLiteOk);
+}
+
+TEST(MicroSpeechTest, DownTest) {
+  ASSERT_EQ(TestAudioSample("unknown", g_down_1000ms_audio_data,
+                            g_down_1000ms_audio_data_size),
+            kTfLiteOk);
+}
+
+TEST(MicroSpeechTest, GoTest) {
+  ASSERT_EQ(TestAudioSample("unknown", g_go_1000ms_audio_data,
+                            g_go_1000ms_audio_data_size),
+            kTfLiteOk);
+}
+
+TEST(MicroSpeechTest, LeftTest) {
+  ASSERT_EQ(TestAudioSample("unknown", g_left_1000ms_audio_data,
+                            g_left_1000ms_audio_data_size),
+            kTfLiteOk);
+}
+
+TEST(MicroSpeechTest, OffTest) {
+  ASSERT_EQ(TestAudioSample("unknown", g_off_1000ms_audio_data,
+                            g_off_1000ms_audio_data_size),
+            kTfLiteOk);
+}
+
+TEST(MicroSpeechTest, OnTest) {
+  ASSERT_EQ(TestAudioSample("unknown", g_on_1000ms_audio_data,
+                            g_on_1000ms_audio_data_size),
+            kTfLiteOk);
+}
+
+TEST(MicroSpeechTest, RigthTest) {
+  ASSERT_EQ(TestAudioSample("unknown", g_rigth_1000ms_audio_data,
+                            g_rigth_1000ms_audio_data_size),
+            kTfLiteOk);
+}
+
+TEST(MicroSpeechTest, StopTest) {
+  ASSERT_EQ(TestAudioSample("unknown", g_stop_1000ms_audio_data,
+                            g_stop_1000ms_audio_data_size),
+            kTfLiteOk);
+}
+
+TEST(MicroSpeechTest, UpTest) {
+  ASSERT_EQ(TestAudioSample("unknown", g_up_1000ms_audio_data,
+                            g_up_1000ms_audio_data_size),
             kTfLiteOk);
 }
 

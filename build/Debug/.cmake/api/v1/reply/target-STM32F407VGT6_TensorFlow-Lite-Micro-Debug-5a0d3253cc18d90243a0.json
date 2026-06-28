@@ -37,7 +37,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 367,
+				"line" : 375,
 				"parent" : 0
 			},
 			{
@@ -58,13 +58,13 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 350,
+				"line" : 358,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 320,
+				"line" : 328,
 				"parent" : 0
 			},
 			{
@@ -76,7 +76,7 @@
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 308,
+				"line" : 316,
 				"parent" : 0
 			}
 		]
@@ -363,7 +363,7 @@
 				130,
 				328,
 				329,
-				336
+				344
 			]
 		},
 		{
@@ -859,7 +859,15 @@
 				332,
 				333,
 				334,
-				335
+				335,
+				336,
+				337,
+				338,
+				339,
+				340,
+				341,
+				342,
+				343
 			]
 		}
 	],
@@ -1254,7 +1262,15 @@
 				333,
 				334,
 				335,
-				336
+				336,
+				337,
+				338,
+				339,
+				340,
+				341,
+				342,
+				343,
+				344
 			]
 		},
 		{
@@ -1268,21 +1284,21 @@
 			"name" : "Object Libraries",
 			"sourceIndexes" : 
 			[
-				337,
-				338,
-				339,
-				340,
-				341,
-				342,
-				343,
-				344,
 				345,
 				346,
 				347,
 				348,
 				349,
 				350,
-				351
+				351,
+				352,
+				353,
+				354,
+				355,
+				356,
+				357,
+				358,
+				359
 			]
 		}
 	],
@@ -3277,7 +3293,19 @@
 		{
 			"backtrace" : 9,
 			"compileGroupIndex" : 2,
-			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/yes_1000ms_audio_data.cpp",
+			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/down_1000ms_audio_data.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 9,
+			"compileGroupIndex" : 2,
+			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/go_1000ms_audio_data.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 9,
+			"compileGroupIndex" : 2,
+			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/left_1000ms_audio_data.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -3289,13 +3317,49 @@
 		{
 			"backtrace" : 9,
 			"compileGroupIndex" : 2,
+			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/noise_1000ms_audio_data.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 9,
+			"compileGroupIndex" : 2,
+			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/off_1000ms_audio_data.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 9,
+			"compileGroupIndex" : 2,
+			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/on_1000ms_audio_data.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 9,
+			"compileGroupIndex" : 2,
+			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/rigth_1000ms_audio_data.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 9,
+			"compileGroupIndex" : 2,
 			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/silence_1000ms_audio_data.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 9,
 			"compileGroupIndex" : 2,
-			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/noise_1000ms_audio_data.cpp",
+			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/stop_1000ms_audio_data.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 9,
+			"compileGroupIndex" : 2,
+			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/up_1000ms_audio_data.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 9,
+			"compileGroupIndex" : 2,
+			"path" : "stm32f4_tflm_project/examples/micro_speech/testdata/yes_1000ms_audio_data.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

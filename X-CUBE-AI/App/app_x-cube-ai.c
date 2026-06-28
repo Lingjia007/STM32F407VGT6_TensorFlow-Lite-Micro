@@ -288,9 +288,12 @@ ai_i8 *data_outs[AI_HELLO_WORLD_OUT_NUM] = {
 
   /* --- micro_speech mode implementation --- */
 #if APP_MODE == APP_MODE_MICRO_SPEECH
-  /* Category labels */
-  static const char *kCategoryLabels[TFLM_CATEGORY_COUNT] = {
-      "silence", "unknown", "yes", "no"};
+  /* Category labels (12-class model, order from model output) */
+#define MS_CATEGORY_COUNT 12
+  static const char *kCategoryLabels[MS_CATEGORY_COUNT] = {
+      "_silence_", "_unknown_", "yes", "no",
+      "up", "down", "left", "right",
+      "on", "off", "stop", "go"};
 
   /* X-CUBE-AI micro_speech_quantized model handles */
   static ai_handle micro_speech_net = AI_HANDLE_NULL;
@@ -318,18 +321,28 @@ ai_i8 *data_outs[AI_HELLO_WORLD_OUT_NUM] = {
     size_t audio_data_size;
   } ms_test_sample_t;
 
-  static ms_test_sample_t ms_test_samples[4];
-#define MS_TEST_SAMPLE_COUNT 4
+  static ms_test_sample_t ms_test_samples[12];
+#define MS_TEST_SAMPLE_COUNT 12
 
   static int ms_test_index = 0;
   static int ms_test_complete = 0;
+  static int ms_pass_count = 0;
+  static int ms_fail_count = 0;
 
   static void ms_init_test_samples(void)
   {
-    ms_test_samples[0] = (ms_test_sample_t){"yes", tflm_test_audio_yes(), tflm_test_audio_yes_size()};
-    ms_test_samples[1] = (ms_test_sample_t){"no", tflm_test_audio_no(), tflm_test_audio_no_size()};
-    ms_test_samples[2] = (ms_test_sample_t){"silence", tflm_test_audio_silence(), tflm_test_audio_silence_size()};
-    ms_test_samples[3] = (ms_test_sample_t){"noise", tflm_test_audio_noise(), tflm_test_audio_noise_size()};
+    ms_test_samples[0] = (ms_test_sample_t){"_silence_", tflm_test_audio_silence(), tflm_test_audio_silence_size()};
+    ms_test_samples[1] = (ms_test_sample_t){"noise", tflm_test_audio_noise(), tflm_test_audio_noise_size()};
+    ms_test_samples[2] = (ms_test_sample_t){"yes", tflm_test_audio_yes(), tflm_test_audio_yes_size()};
+    ms_test_samples[3] = (ms_test_sample_t){"no", tflm_test_audio_no(), tflm_test_audio_no_size()};
+    ms_test_samples[4] = (ms_test_sample_t){"up", tflm_test_audio_up(), tflm_test_audio_up_size()};
+    ms_test_samples[5] = (ms_test_sample_t){"down", tflm_test_audio_down(), tflm_test_audio_down_size()};
+    ms_test_samples[6] = (ms_test_sample_t){"left", tflm_test_audio_left(), tflm_test_audio_left_size()};
+    ms_test_samples[7] = (ms_test_sample_t){"right", tflm_test_audio_rigth(), tflm_test_audio_rigth_size()};
+    ms_test_samples[8] = (ms_test_sample_t){"on", tflm_test_audio_on(), tflm_test_audio_on_size()};
+    ms_test_samples[9] = (ms_test_sample_t){"off", tflm_test_audio_off(), tflm_test_audio_off_size()};
+    ms_test_samples[10] = (ms_test_sample_t){"stop", tflm_test_audio_stop(), tflm_test_audio_stop_size()};
+    ms_test_samples[11] = (ms_test_sample_t){"go", tflm_test_audio_go(), tflm_test_audio_go_size()};
   }
 
   static int ms_bootstrap(ai_handle *act_addr)
@@ -384,11 +397,11 @@ ai_i8 *data_outs[AI_HELLO_WORLD_OUT_NUM] = {
     }
 
     /* Step 4: Dequantize and print results */
-    float category_predictions[TFLM_CATEGORY_COUNT];
+    float category_predictions[MS_CATEGORY_COUNT];
     int max_idx = 0;
     float max_val = -999.0f;
     printf("Predictions for <%s>:\r\n", sample->label);
-    for (int i = 0; i < TFLM_CATEGORY_COUNT; i++)
+    for (int i = 0; i < MS_CATEGORY_COUNT; i++)
     {
       category_predictions[i] = (float)((int8_t)ms_data_out[i] - MS_OUTPUT_ZEROPOINT) * MS_OUTPUT_SCALE;
       printf("  %.4f %s\r\n", (double)category_predictions[i], kCategoryLabels[i]);
@@ -398,12 +411,19 @@ ai_i8 *data_outs[AI_HELLO_WORLD_OUT_NUM] = {
         max_idx = i;
       }
     }
+    /* Determine if result is acceptable */
+    int is_ok = 0;
+    if (strcmp(sample->label, kCategoryLabels[max_idx]) == 0)
+    {
+      is_ok = 1; /* exact match */
+    }
+    else if (strcmp(sample->label, "noise") == 0 && strcmp(kCategoryLabels[max_idx], "_silence_") == 0)
+    {
+      is_ok = 1; /* noise -> silence is acceptable */
+    }
     printf("Result: %s (%s)\r\n", kCategoryLabels[max_idx],
-           (strcmp(sample->label, kCategoryLabels[max_idx]) == 0 ||
-            (strcmp(sample->label, "noise") == 0 && max_idx == 0))
-               ? "OK"
-               : "MISMATCH");
-    return 0;
+           is_ok ? "OK" : "MISMATCH");
+    return is_ok ? 1 : 0;
   }
 #endif /* APP_MODE_MICRO_SPEECH */
 
@@ -460,12 +480,18 @@ ai_i8 *data_outs[AI_HELLO_WORLD_OUT_NUM] = {
 #if APP_MODE == APP_MODE_MICRO_SPEECH
     if (!ms_test_complete && ms_test_index < (int)MS_TEST_SAMPLE_COUNT)
     {
-      ms_test_sample(&ms_test_samples[ms_test_index]);
+      int result = ms_test_sample(&ms_test_samples[ms_test_index]);
+      if (result > 0)
+        ms_pass_count++;
+      else
+        ms_fail_count++;
       ms_test_index++;
       if (ms_test_index >= (int)MS_TEST_SAMPLE_COUNT)
       {
         ms_test_complete = 1;
         printf("\r\n=== All micro_speech tests done ===\r\n");
+        printf("PASSED: %d/%d\r\n", ms_pass_count, (int)MS_TEST_SAMPLE_COUNT);
+        printf("FAILED: %d/%d\r\n", ms_fail_count, (int)MS_TEST_SAMPLE_COUNT);
       }
     }
 #endif
