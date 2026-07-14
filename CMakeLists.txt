@@ -291,22 +291,20 @@ set(TFLM_SOURCES
     # Audio preprocessor model data
     ${TFLM_BASE}/examples/micro_speech/models/audio_preprocessor_int8_model_data.cpp
 
-    # Test audio data
-    ${TFLM_BASE}/examples/micro_speech/testdata/down_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/go_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/left_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/no_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/noise_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/off_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/on_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/rigth_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/silence_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/stop_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/up_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/yes_1000ms_audio_data.cpp
+    # Audio frontend preprocessing
+    ${CMAKE_SOURCE_DIR}/preprocess/audio_frontend.c
 
-    # Micro speech TFLM preprocess wrapper
-    ${CMAKE_SOURCE_DIR}/X-CUBE-AI/App/micro_speech_tflm_preprocess.cpp
+    # Test audio data (batch 4 - flash size limited)
+    ${TFLM_BASE}/examples/micro_speech/testdata/sheila_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/tree_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/visual_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/wow_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/follow_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/yes_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/no_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/up_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/down_1000ms_audio_data.cpp
+    ${TFLM_BASE}/examples/micro_speech/testdata/left_1000ms_audio_data.cpp
 
     # VOFA+ debug support
     ${CMAKE_SOURCE_DIR}/VOFA+_DEBUG/vofa_debug.c
@@ -314,10 +312,20 @@ set(TFLM_SOURCES
 
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-    # CMSIS DSP sources for arm_cos_f32 and arm_sin_f32
+    # CMSIS DSP sources for arm_cos_f32, arm_sin_f32, RFFT, absmax, shift
     ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/FastMathFunctions/arm_cos_f32.c
     ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/FastMathFunctions/arm_sin_f32.c
     ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/CommonTables/arm_common_tables.c
+    ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/TransformFunctions/arm_rfft_init_q15.c
+    ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/TransformFunctions/arm_rfft_q15.c
+    ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/TransformFunctions/arm_cfft_init_q15.c
+    ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/TransformFunctions/arm_cfft_q15.c
+    ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c
+    ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/TransformFunctions/arm_bitreversal.c
+    ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/TransformFunctions/arm_bitreversal2.c
+    ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/CommonTables/arm_const_structs.c
+    ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/StatisticsFunctions/arm_absmax_q15.c
+    ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Source/BasicMathFunctions/arm_shift_q15.c
     # CMSIS-NN sources
     ${CMSIS_NN_SOURCES}
     # TFLM sources
@@ -327,6 +335,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Include
+    # Audio preprocessing
+    ${CMAKE_SOURCE_DIR}/preprocess
     # TFLM include paths
     ${TFLM_BASE}
     ${TFLM_BASE}/signal/micro/kernels
