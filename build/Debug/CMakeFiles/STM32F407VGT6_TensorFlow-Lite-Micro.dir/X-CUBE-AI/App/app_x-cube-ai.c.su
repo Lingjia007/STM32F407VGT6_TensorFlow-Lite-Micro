@@ -1,9 +1,4 @@
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:114:15:ai_log_err	16	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:129:14:ai_boostrap	32	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:177:14:ai_run	16	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:237:15:timing_init	16	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:247:23:ticks_to_us	16	static
 D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:257:7:acquire_and_process_data	16	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:277:7:post_process	32	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:334:8:MX_X_CUBE_AI_Init	8	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:277:7:post_process	8	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:334:8:MX_X_CUBE_AI_Init	16	static
 D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/X-CUBE-AI/App/app_x-cube-ai.c:349:8:MX_X_CUBE_AI_Process	80	static

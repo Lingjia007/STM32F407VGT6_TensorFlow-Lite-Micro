@@ -5005,44 +5005,44 @@
   ],
   "environment": {
     "generated_model": {
-      "generated_time": "2026-07-15T02:12:22+0800",
+      "generated_time": "2026-07-15T02:52:55+0800",
       "model_files": [
         {
           "name": "micro_speech_data_params.h",
-          "signature": "0x4a0b23745341bb6ed45514e9f1d1e40b"
+          "signature": "0x9aefab214f24c5bfda44544ed1532889"
         },
         {
           "name": "micro_speech_data_params.c",
-          "signature": "0x44982cac60cfc070b7cb60fefb7cc911"
+          "signature": "0xf7c4923ee12b1e2a3325c412bcabeb2c"
         },
         {
           "name": "micro_speech_data.h",
-          "signature": "0xdfac79086b0c52da29572d4453878384"
+          "signature": "0x38a22f3953f12a4e9996f86e2b3f74ad"
         },
         {
           "name": "micro_speech_data.c",
-          "signature": "0x3c95e107c7cd71ec874e07598d433967"
+          "signature": "0xfed62825910e07209506c256a5cb7df8"
         },
         {
           "name": "micro_speech_config.h",
-          "signature": "0x3f9bf78d22d7df5579abdd426fbad3f9"
+          "signature": "0x4d2b56b3171395ded57c354b6cffeeef"
         },
         {
           "name": "micro_speech.h",
-          "signature": "0xafca905de752424c3694f3692c9b598f"
+          "signature": "0x177db1f239a385c378580db4cae16b10"
         },
         {
           "name": "micro_speech.c",
-          "signature": "0x5f618f7642f3faf60235e5327accfc07"
+          "signature": "0x42e61e515c5255ab60f587787ce2f1d2"
         }
       ],
       "name": "micro_speech"
     },
-    "network_signature": "0x1d457868413d64ae",
+    "network_signature": "0x6f5208e3580eb842",
     "test_name": "",
     "tools": [
       {
-        "arguments": "analyze --target stm32f4 --name micro_speech -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/examples/micro_speech/models/models_cmsis/model.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace3913085204050013733313724946661118 --output C:/Users/31254/.stm32cubemx/micro_speech_output",
+        "arguments": "generate --target stm32f4 --name micro_speech -m D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/stm32f4_tflm_project/examples/micro_speech/models/models_cmsis/model.tflite --compression none --verbosity 1 --workspace C:/Users/31254/AppData/Local/Temp/mxAI_workspace416037387724003006238777603591318 --output C:/Users/31254/.stm32cubemx/micro_speech_output",
         "environment": [
           "STATS_TYPE=X-CUBE-AI"
         ],

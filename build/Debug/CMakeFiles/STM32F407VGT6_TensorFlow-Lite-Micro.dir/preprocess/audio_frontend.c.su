@@ -1,10 +1,4 @@
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:9:12:most_significant_bit_32	16	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:14:12:most_significant_bit_64	16	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:19:17:sqrt_32	24	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:37:17:sqrt_64	104	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:58:16:log2_fraction_part_32	48	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:74:16:log_32	144	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:88:5:audio_frontend_init	24	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:94:6:audio_frontend_reset	16	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:98:6:audio_frontend_process_frame	2976	static
-D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:213:6:audio_frontend_process_clip	40	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:88:5:audio_frontend_init	8	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:94:6:audio_frontend_reset	0	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:98:6:audio_frontend_process_frame	2800	static
+D:/edgedownload/STM32F407VGT6_TensorFlow-Lite-Micro/preprocess/audio_frontend.c:213:6:audio_frontend_process_clip	24	static

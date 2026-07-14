@@ -364,6 +364,16 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/VOFA+_DEBUG
 )
 
+# Enable maximum compiler optimization for both C and C++ (overrides Debug -O0)
+target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE
+    -O3                  # max optimization level
+    -flto                # link-time optimization (cross-module inlining)
+    -funroll-loops       # explicit loop unrolling
+    -fomit-frame-pointer # free up a register
+)
+# LTO must also be enabled at link stage
+target_link_options(${CMAKE_PROJECT_NAME} PRIVATE -flto)
+
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
     # TFLM definitions
