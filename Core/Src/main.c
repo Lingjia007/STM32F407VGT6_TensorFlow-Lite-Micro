@@ -53,12 +53,43 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+uint8_t Res, buf, flag = 0;
 
+uint32_t dma[4];
+uint32_t va124;
+
+int va132;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+unsigned cb_cnt = 0;
 
+// I2S接受完成回调函数
+void HAL_I2S_RxCpltCallback(I2S_HandleTypeDef *hi2s)
+{
+  if (hi2s == &hi2s2)
+  {
+    cb_cnt++;
+    va124 = (dma[0] << 8) + (dma[1] >> 8);
+    if (va124 & 0x800000)
+    {
+      va132 = 0xff000000 | va124;
+    }
+    else
+    {
+      va132 = va124;
+    }
+    // 以采样频率的十分之一，串口发送采样值
+    if (cb_cnt % 1 == 0)
+    {
+      printf("%d\r\n", va132 / 32);
+    }
+    // if(flag==2)
+    // HAL_I2S_DMAStop(&hi2s2);
+    HAL_I2S_Receive(&hi2s2, (uint16_t *)dma, 4, 100);
+  }
+}
 /* USER CODE END 0 */
 
 /**
@@ -95,7 +126,7 @@ int main(void)
   MX_I2S2_Init();
   MX_X_CUBE_AI_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_I2S_Receive_DMA(&hi2s2, (uint16_t *)dma, 4);
   /* USER CODE END 2 */
 
   /* Infinite loop */
