@@ -85,7 +85,17 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-
+  /* Minimal: output '!' via UART4 direct registers, then loop.
+   * Avoids any stack access that could double-fault. */
+  {
+    volatile uint32_t * const uart_sr = (volatile uint32_t *)0x40004C00u;
+    volatile uint32_t * const uart_dr = (volatile uint32_t *)0x40004C04u;
+    while (!(*uart_sr & (1u << 7))) {}  /* wait TXE */
+    *uart_dr = (uint32_t)'!';
+  }
+  while (1)
+  {
+  }
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {
@@ -100,7 +110,13 @@ void HardFault_Handler(void)
 void MemManage_Handler(void)
 {
   /* USER CODE BEGIN MemoryManagement_IRQn 0 */
-
+  {
+    volatile uint32_t * const uart_sr = (volatile uint32_t *)0x40004C00u;
+    volatile uint32_t * const uart_dr = (volatile uint32_t *)0x40004C04u;
+    while (!(*uart_sr & (1u << 7))) {}
+    *uart_dr = (uint32_t)'M';
+  }
+  while (1) {}
   /* USER CODE END MemoryManagement_IRQn 0 */
   while (1)
   {
@@ -115,7 +131,13 @@ void MemManage_Handler(void)
 void BusFault_Handler(void)
 {
   /* USER CODE BEGIN BusFault_IRQn 0 */
-
+  {
+    volatile uint32_t * const uart_sr = (volatile uint32_t *)0x40004C00u;
+    volatile uint32_t * const uart_dr = (volatile uint32_t *)0x40004C04u;
+    while (!(*uart_sr & (1u << 7))) {}
+    *uart_dr = (uint32_t)'B';
+  }
+  while (1) {}
   /* USER CODE END BusFault_IRQn 0 */
   while (1)
   {
@@ -130,7 +152,13 @@ void BusFault_Handler(void)
 void UsageFault_Handler(void)
 {
   /* USER CODE BEGIN UsageFault_IRQn 0 */
-
+  {
+    volatile uint32_t * const uart_sr = (volatile uint32_t *)0x40004C00u;
+    volatile uint32_t * const uart_dr = (volatile uint32_t *)0x40004C04u;
+    while (!(*uart_sr & (1u << 7))) {}
+    *uart_dr = (uint32_t)'U';
+  }
+  while (1) {}
   /* USER CODE END UsageFault_IRQn 0 */
   while (1)
   {

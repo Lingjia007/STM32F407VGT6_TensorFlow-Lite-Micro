@@ -294,17 +294,9 @@ set(TFLM_SOURCES
     # Audio frontend preprocessing
     ${CMAKE_SOURCE_DIR}/preprocess/audio_frontend.c
 
-    # Test audio data (batch 4 - flash size limited)
-    ${TFLM_BASE}/examples/micro_speech/testdata/sheila_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/tree_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/visual_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/wow_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/follow_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/yes_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/no_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/up_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/down_1000ms_audio_data.cpp
-    ${TFLM_BASE}/examples/micro_speech/testdata/left_1000ms_audio_data.cpp
+    # Audio streaming app (I2S DMA capture + ring buffer)
+    ${CMAKE_SOURCE_DIR}/audio_app/audio_capture_ring_buff.c
+    ${CMAKE_SOURCE_DIR}/audio_app/audio_stream.c
 
     # VOFA+ debug support
     ${CMAKE_SOURCE_DIR}/VOFA+_DEBUG/vofa_debug.c
@@ -337,6 +329,8 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/DSP/Include
     # Audio preprocessing
     ${CMAKE_SOURCE_DIR}/preprocess
+    # Audio streaming app
+    ${CMAKE_SOURCE_DIR}/audio_app
     # TFLM include paths
     ${TFLM_BASE}
     ${TFLM_BASE}/signal/micro/kernels

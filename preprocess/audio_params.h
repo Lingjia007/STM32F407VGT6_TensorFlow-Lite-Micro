@@ -15,6 +15,13 @@
 #define LOWER_BAND_HZ        125
 #define UPPER_BAND_HZ        7500
 
+// Streaming inference parameters: every SLIDE_SAMPLES of new audio, the
+// 1-second window slides and inference runs. SLIDE_COLS is the number of
+// spectrogram columns advanced per slide (= SLIDE_SAMPLES / WINDOW_STRIDE).
+#define SLIDE_COLS           10
+#define SLIDE_SAMPLES        (SLIDE_COLS * WINDOW_STRIDE)   // 3200 samples = 200 ms
+#define SLIDE_MS             (SLIDE_SAMPLES * 1000 / SAMPLE_RATE)  // 200 ms
+
 // Window / filter bank scaling
 #define WINDOW_SCALING_BITS          12
 #define FILTER_BANK_SCALING_BITS     12
