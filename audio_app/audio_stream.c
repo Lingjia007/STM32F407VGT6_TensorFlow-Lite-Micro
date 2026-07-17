@@ -21,14 +21,6 @@ static int16_t s_ring_backing[AS_RING_NB_SAMPLES * AS_RING_NB_FRAMES];
 
 static AudioCaptureRingBuff_t s_ring;
 
-/* Diagnostic: incremented in every DMA half/full IRQ callback. */
-volatile uint32_t g_dma_irq_cnt = 0;
-/* Separate counters to detect if only one of Half/FullCplt fires.
- * Expected at 16kHz: HalfCplt=50/s, FullCplt=50/s (10ms per half-buffer).
- * If only one fires, the other half of audio data is lost. */
-volatile uint32_t g_half_cnt = 0;
-volatile uint32_t g_full_cnt = 0;
-
 /* Scratch buffer for one DMA half-block of mono samples (160 x int16_t). */
 static int16_t s_mono[AS_DMA_HALF_FRAMES] __attribute__((section(".ccmram")));
 
@@ -51,21 +43,12 @@ void AudioStream_start(void)
   {
     printf("I2S DMA FAIL=%d\r\n", (int)st);
   }
-  /* Diagnostic: dump DMA1_Stream3 CR (HTIE=bit3, TCIE=bit4, CIRC=bit8) and NDTR */
-  printf("DMA CR=0x%08lX (HTIE=%lu TCIE=%lu CIRC=%lu EN=%lu) NDTR=%lu\r\n",
-         (unsigned long)DMA1_Stream3->CR,
-         (unsigned long)((DMA1_Stream3->CR >> 3) & 1),
-         (unsigned long)((DMA1_Stream3->CR >> 4) & 1),
-         (unsigned long)((DMA1_Stream3->CR >> 8) & 1),
-         (unsigned long)((DMA1_Stream3->CR >> 0) & 1),
-         (unsigned long)DMA1_Stream3->NDTR);
 }
 
 /* Deinterleave one DMA half-block into s_mono, remove DC offset, push to ring.
  * half_id = 0 -> first half of s_dma_buf, 1 -> second half. */
 static void AudioStream_process_half(uint8_t half_id)
 {
-  g_dma_irq_cnt++;
   const uint16_t *src = s_dma_buf + half_id * AS_DMA_HALFWORDS;
 
   /* Extract left (or right) channel 16-bit sample from each stereo frame.
@@ -91,17 +74,11 @@ static void AudioStream_process_half(uint8_t half_id)
 void HAL_I2S_RxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
 {
   if (hi2s->Instance == SPI2)
-  {
-    g_half_cnt++;
     AudioStream_process_half(0);
-  }
 }
 
 void HAL_I2S_RxCpltCallback(I2S_HandleTypeDef *hi2s)
 {
   if (hi2s->Instance == SPI2)
-  {
-    g_full_cnt++;
     AudioStream_process_half(1);
-  }
 }

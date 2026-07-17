@@ -16,7 +16,8 @@ extern "C" {
 #endif
 
 /* Producer = I2S DMA IRQ, consumer = main loop.
- * Only "availableSamples" is shared; updates are atomic via LDREX/STREX. */
+ * "availableSamples" is shared across ISR/main contexts and is marked volatile
+ * so the compiler always re-reads it (updates are atomic via LDREX/STREX). */
 typedef struct
 {
   uint8_t      *pData;             /* Backing store (provided by caller)            */
@@ -25,7 +26,7 @@ typedef struct
   uint32_t      nbSamples;         /* Samples per frame group                       */
   uint32_t      readSampleIndex;   /* Next sample to consume                        */
   uint32_t      writeSampleIndex;  /* Next sample to produce                        */
-  uint32_t      availableSamples;  /* Samples currently available to consume        */
+  volatile uint32_t availableSamples; /* Shared ISR/main: samples available to consume */
 } AudioCaptureRingBuff_t;
 
 /* Bind a caller-provided backing buffer and configure geometry. */

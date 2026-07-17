@@ -57,12 +57,6 @@ extern "C"
   /* Access the ring buffer handle (consumer side). */
   AudioCaptureRingBuff_t *AudioStream_get_ring(void);
 
-  /* Incremented in every DMA half/full callback. Diagnostic counter. */
-  extern volatile uint32_t g_dma_irq_cnt;
-  /* Separate Half/Full callback counters to detect if one is missing. */
-  extern volatile uint32_t g_half_cnt;
-  extern volatile uint32_t g_full_cnt;
-
 #ifdef __cplusplus
 }
 #endif

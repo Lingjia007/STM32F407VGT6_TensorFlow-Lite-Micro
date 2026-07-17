@@ -239,24 +239,6 @@ ai_i8 *data_outs[AI_MICRO_SPEECH_OUT_NUM] = {
     if (!ready)
       return -2; /* initial 1-second window not yet filled */
 
-    /* Diagnostic: print audio amplitude (max abs) for the first 20 inferences
-     * to verify INMP441 signal level. Normal speech should be ~500-5000. */
-    static uint32_t s_amp_budget = 20;
-    if (s_amp_budget > 0)
-    {
-      int16_t amax = 0;
-      for (int i = 0; i < DESIRED_SAMPLES; i++)
-      {
-        int16_t a = g_stream.audio_window[i];
-        if (a < 0)
-          a = (int16_t)(-a);
-        if (a > amax)
-          amax = a;
-      }
-      printf("amp=%d\r\n", (int)amax);
-      s_amp_budget--;
-    }
-
     memcpy(data[0], audio_frontend_stream_get_features(&g_stream),
            AI_MICRO_SPEECH_IN_1_SIZE_BYTES);
     return 0;
@@ -311,41 +293,7 @@ ai_i8 *data_outs[AI_MICRO_SPEECH_OUT_NUM] = {
   void MX_X_CUBE_AI_Init(void)
   {
     /* USER CODE BEGIN 5 */
-    /* Print reset cause from RCC_CSR (bit25=BOR,26=PIN,27=POR,28=SFT,29=IWDG,30=WWDG) */
-    printf("\r\n=== micro_speech streaming === CSR=0x%08lX\r\n", (unsigned long)RCC->CSR);
-    __HAL_RCC_CLEAR_RESET_FLAGS();
-
-    /* Diagnostic: dump I2S clock-related registers to verify Fs.
-     * PLLI2SCFGR: bits 6-14 = PLLI2SN, bits 28-30 = PLLI2SR.
-     * CFGR.I2SSRC bit 23: 0=PLLI2S, 1=CKIN.
-     * I2SPR: bits 0-7 = I2SDIV, bit 8 = ODD. */
-    printf("HSE_VALUE=%lu\r\n", (unsigned long)HSE_VALUE);
-    printf("PLLI2SCFGR=0x%08lX (N=%lu R=%lu)\r\n",
-           (unsigned long)RCC->PLLI2SCFGR,
-           (unsigned long)((RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SN) >> 6),
-           (unsigned long)((RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SR) >> 28));
-    printf("CFGR=0x%08lX I2SSRC=%lu\r\n",
-           (unsigned long)RCC->CFGR,
-           (unsigned long)((RCC->CFGR >> 23) & 1));
-    printf("SPI2 I2SPR=0x%04lX (DIV=%lu ODD=%lu)\r\n",
-           (unsigned long)SPI2->I2SPR,
-           (unsigned long)(SPI2->I2SPR & 0xFF),
-           (unsigned long)((SPI2->I2SPR >> 8) & 1));
-    printf("SPI2 I2SCFGR=0x%04lX\r\n", (unsigned long)SPI2->I2SCFGR);
-    printf("RCC->CR=0x%08lX (PLLI2SON=%lu PLLON=%lu HSEON=%lu HSERDY=%lu PLLI2SRDY=%lu)\r\n",
-           (unsigned long)RCC->CR,
-           (unsigned long)((RCC->CR >> 26) & 1),
-           (unsigned long)((RCC->CR >> 24) & 1),
-           (unsigned long)((RCC->CR >> 16) & 1),
-           (unsigned long)((RCC->CR >> 17) & 1),
-           (unsigned long)((RCC->CR >> 27) & 1));
-    printf("RCC->PLLCFGR=0x%08lX (PLLM=%lu PLLN=%lu PLLP=%lu)\r\n",
-           (unsigned long)RCC->PLLCFGR,
-           (unsigned long)(RCC->PLLCFGR & 0x3F),
-           (unsigned long)((RCC->PLLCFGR >> 6) & 0x1FF),
-           (unsigned long)(((RCC->PLLCFGR >> 16) & 3) + 1));
-    printf("SYSCLK=%lu Hz\r\n", (unsigned long)HAL_RCC_GetSysClockFreq());
-    printf("I2SCLK=%lu Hz\r\n", (unsigned long)HAL_RCCEx_GetPeriphCLKFreq(RCC_PERIPHCLK_I2S));
+    printf("\r\n=== micro_speech streaming ===\r\n");
 
     ai_boostrap(data_activations0);
 
@@ -362,38 +310,6 @@ ai_i8 *data_outs[AI_MICRO_SPEECH_OUT_NUM] = {
     /* USER CODE BEGIN 6 */
     if (!micro_speech)
       return;
-
-    /* Diagnostic: every 1s, print DMA IRQ count + ring availability.
-     * Lets us see if DMA is firing and whether the consumer keeps up.
-     * Also print Half/Full callback counts to detect if one is missing
-     * (expected at 16kHz: h~100, f~50, total ~150/s).
-     * I2SE = SPI2->I2SCFGR bit10 (must be 1 during operation). */
-    {
-      static uint32_t s_last_tick = 0;
-      static uint32_t s_last_dma_cnt = 0xFFFFFFFFu;
-      static uint32_t s_last_half = 0xFFFFFFFFu;
-      static uint32_t s_last_full = 0xFFFFFFFFu;
-      uint32_t now = HAL_GetTick();
-      if (now - s_last_tick >= 1000U)
-      {
-        uint32_t dma = g_dma_irq_cnt;
-        uint32_t h = g_half_cnt;
-        uint32_t f = g_full_cnt;
-        AudioCaptureRingBuff_t *ring = AudioStream_get_ring();
-        printf("t=%lu dma=%lu d=%ld h=%ld f=%ld avail=%ld I2SE=%lu\r\n",
-               (unsigned long)now,
-               (unsigned long)dma,
-               (long)(dma - (long)s_last_dma_cnt),
-               (long)(h - (long)s_last_half),
-               (long)(f - (long)s_last_full),
-               (long)ring->availableSamples,
-               (unsigned long)((SPI2->I2SCFGR >> 10) & 1));
-        s_last_tick = now;
-        s_last_dma_cnt = dma;
-        s_last_half = h;
-        s_last_full = f;
-      }
-    }
 
     int res;
     do
